@@ -1,0 +1,45 @@
+.header {}
+
+.container {
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    align-items: flex-start;
+    height: 93px;
+    background-color: aliceblue;
+}
+
+.box {
+    width: 150px;
+    height: auto;
+    line-height: 100px;
+}
+
+.box:nth-child(1) {
+    width: 75%;
+}
+
+.box:nth-child(2) {
+    width: 6.25%;
+    text-align: center;
+    
+}
+
+.box:nth-child(3) {
+    width: 6.25%;
+    text-align: center;
+    
+}
+
+.box:nth-child(4) {
+    width: 6.25%;
+    text-align: center;
+    
+}
+
+.box:nth-child(5) {
+    width: 6.25%;
+    text-align: center;
+    
+}
+
