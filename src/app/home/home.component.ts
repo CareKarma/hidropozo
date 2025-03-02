@@ -7,7 +7,7 @@ import {MatDividerModule} from '@angular/material/divider';
   selector: 'app-home',
   imports: [HeaderComponent, FooterComponent, MatDividerModule],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
 

@@ -1,0 +1,12 @@
+.footer {
+}
+
+.footer .social-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer .social-links i {
+    font-size: 1.25rem;
+}
