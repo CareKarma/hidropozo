@@ -6,7 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  scrollToSection(section: string) {
-    document.querySelector(section)?.scrollIntoView({ behavior: 'smooth' });
+  scrollToSection(sectionId: string) {
+    const section = document.querySelector(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
   }
 }

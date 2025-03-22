@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-contact-form',
@@ -9,11 +10,31 @@ import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
 export class ContactFormComponent {
   public sendEmail(e: Event) {
     e.preventDefault();
-    emailjs.sendForm('service_hx7xp4s', 'template_8qifvkx', e.target as HTMLFormElement, 'qnf2am-_g9nRP-NdO')
+    const form = e.target as HTMLFormElement;
+
+    emailjs.sendForm('service_hx7xp4s', 'template_8qifvkx', form, 'qnf2am-_g9nRP-NdO')
       .then((result: EmailJSResponseStatus) => {
         console.log(result.text);
+
+        Swal.fire({
+          title: '¡Mensaje enviado!',
+          text: 'Gracias por contactarnos. Nos pondremos en contacto contigo pronto.',
+          icon: 'success',
+          confirmButtonText: 'Aceptar',
+          confirmButtonColor: '#primary',
+        });
+
+        form.reset();
       }, (error) => {
         console.log(error.text);
+
+        Swal.fire({
+          title: 'Error',
+          text: 'Hubo un problema al enviar el mensaje. Por favor, inténtalo de nuevo.',
+          icon: 'error',
+          confirmButtonText: 'Aceptar',
+          confirmButtonColor: '#primary',
+        });
       });
   }
 }

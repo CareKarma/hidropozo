@@ -1,50 +1,90 @@
 <app-header></app-header>
-<div class="w-full">
-    <div id="inicio" class="w-full h-[80vh] relative">
-        <img src="https://dvsaigua.com/wp-content/uploads/2024/02/ConsumirAguaPozo.webp" alt=""
-            class="object-cover w-full h-full">
-        <div class="absolute flex h-full top-0 w-full ">
-            <div class="mx-auto max-screen w-full flex items-center">
-                <span class="description-title">
-                    Hola, somos Hidropozo SRL
-                </span>
-            </div>
-        </div>
+
+<!-- Sección de Inicio -->
+<div id="inicio" class="w-full h-[80vh] relative overflow-hidden scroll-mt-16">
+  <img src="https://dvsaigua.com/wp-content/uploads/2024/02/ConsumirAguaPozo.webp" alt="Hidropozo Inicio"
+    class="object-cover w-full h-full">
+  <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+    <div class="text-center">
+      <h1 class="text-5xl md:text-6xl font-bold text-white mb-4 animate-fade-in">
+        Hidropozo SRL
+      </h1>
+      <p class="text-xl md:text-2xl text-white max-w-2xl mx-auto animate-fade-in-up">
+        Especialistas en perforación de pozos y mantenimiento. Soluciones confiables y eficientes para tus necesidades de agua.
+      </p>
     </div>
-    <div id="servicios" class="box">
-        <div class="flex flex-col">
-            <div class="services-title">
-                <h1 style="text-align: center;">Nuestros Servicios</h1>
-            </div>
-            <div class="grid grid-cols-3 w-full">
-                <div class="">
-                    <div class="img-1"></div>
-                </div>
-                <div class="">
-                    <div class="img-2"></div>
-                </div>
-                <div class="">
-                    <div class="img-3"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="nosotros" class="box">
-        <div class="">
-            <div class="services-title">
-                <h1 style="text-align: center;">Nosotros</h1>
-            </div>
-        </div>
-    </div>
-    <div id="contacto" class="box">
-        <div class="">
-            <div class="services-title">
-                <h1 style="text-align: center;">Contacto</h1>
-            </div>
-            <app-contact-form></app-contact-form>
-        </div>
-    </div>
+  </div>
 </div>
-<div class="footer">
-    <app-footer></app-footer>
+
+<!-- Sección de Servicios -->
+<div id="servicios" class="w-full py-16 bg-[#f0f8ff] scroll-mt-16">
+  <div class="container mx-auto px-4">
+    <h2 class="text-4xl md:text-5xl font-bold text-center text-[#1e3a8a] mb-12">
+      Nuestros Servicios
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Servicio 1 -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+        <div class="h-64 bg-cover bg-center" style="background-image: url('https://plus.unsplash.com/premium_photo-1663045495725-89f23b57cfc5?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold text-[#1e3a8a] mb-2">Perforación de Pozos</h3>
+          <p class="text-gray-600">
+            Realizamos perforaciones profesionales para garantizar un suministro de agua confiable.
+          </p>
+        </div>
+      </div>
+
+      <!-- Servicio 2 -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+        <div class="h-64 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1627306932497-74286868a486?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold text-[#1e3a8a] mb-2">Mantenimiento</h3>
+          <p class="text-gray-600">
+            Servicios de mantenimiento preventivo y correctivo para tus pozos.
+          </p>
+        </div>
+      </div>
+
+      <!-- Servicio 3 -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+        <div class="h-64 bg-cover bg-center" style="background-image: url('https://plus.unsplash.com/premium_photo-1661869941600-4f3a2f574804?q=80&w=2674&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold text-[#1e3a8a] mb-2">Consultoría</h3>
+          <p class="text-gray-600">
+            Asesoramiento experto para optimizar el uso de recursos hídricos.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+
+<!-- Sección de Nosotros -->
+<div id="nosotros" class="w-full py-16 bg-white scroll-mt-16">
+  <div class="container mx-auto px-4">
+    <h2 class="text-4xl md:text-5xl font-bold text-center text-[#1e3a8a] mb-12">
+      Nosotros
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div class="text-center md:text-left">
+        <p class="text-xl text-gray-700 mb-6">
+          En Hidropozo SRL, nos dedicamos a brindar soluciones integrales para el aprovechamiento sostenible del agua. Con más de 10 años de experiencia, somos líderes en perforación y mantenimiento de pozos.
+        </p>
+      </div>
+      <div class="h-96 bg-cover bg-center rounded-lg shadow-lg" style="background-image: url('https://images.unsplash.com/photo-1586773860418-d37222d8fce3?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Sección de Contacto -->
+<div id="contacto" class="w-full py-16 bg-[#f0f8ff] scroll-mt-16">
+  <div class="container mx-auto px-4">
+    <h2 class="text-4xl md:text-5xl font-bold text-center text-[#1e3a8a] mb-12">
+      Contacto
+    </h2>
+    <app-contact-form></app-contact-form>
+  </div>
+</div>
+
+<!-- Footer -->
+<app-footer></app-footer>

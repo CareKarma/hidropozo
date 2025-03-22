@@ -1,16 +1,56 @@
-<div class="footer bg-gray-800 text-white py-4">
-  <div class="container mx-auto text-center">
-    <p>&copy; {{ currentYear }} Hidropozo. All rights reserved.</p>
-    <div class="social-links mt-2">
-      <a href="https://instagram.com" class="mx-2 text-pink-500" target="_blank">
-        <i class="fab fa-instagram"></i> Instagram
-      </a>
-      <a href="https://wa.me/1234567890" class="mx-2 text-green-500" target="_blank">
-        <i class="fab fa-whatsapp"></i> WhatsApp 1
-      </a>
-      <a href="https://wa.me/0987654321" class="mx-2 text-green-500" target="_blank">
-        <i class="fab fa-whatsapp"></i> WhatsApp 2
-      </a>
+<div class="footer fixed bottom-0 left-0 w-full bg-[#1e3a8a] text-white transition-all duration-500 transform translate-y-40 hover:translate-y-0"
+     [ngClass]="{'translate-y-0': isFooterVisible}">
+  <div class="container mx-auto px-4 md:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 py-6">
+      <!-- Sección 1: Logo y descripción -->
+      <div class="mb-6 md:mb-0">
+        <img src="assets/logo.jpg" alt="Hidropozo Logo" class="h-14 mb-3">
+        <p class="text-sm text-gray-300">
+          Especialistas en perforación de pozos y mantenimiento. Soluciones confiables y eficientes.
+        </p>
+      </div>
+
+      <!-- Sección 2: Información de contacto -->
+      <div class="mb-6 md:mb-0">
+        <h3 class="text-lg font-semibold mb-3 text-[#f59e0b]">Contacto</h3>
+        <ul class="space-y-2 text-gray-300">
+          <li class="flex items-center">
+            <i class="fas fa-map-marker-alt text-[#f59e0b] mr-2"></i>
+            <span>Dirección: Calle Falsa 123, Ciudad, País</span>
+          </li>
+          <li class="flex items-center">
+            <i class="fas fa-phone-alt text-[#f59e0b] mr-2"></i>
+            <span>Teléfono: +123 456 7890</span>
+          </li>
+          <li class="flex items-center">
+            <i class="fas fa-envelope text-[#f59e0b] mr-2"></i>
+            <span>Email: info&#64;hidropozo.com</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Sección 3: Redes sociales -->
+      <div>
+        <h3 class="text-lg font-semibold mb-3 text-[#f59e0b]">Síguenos</h3>
+        <div class="social-links flex space-x-4">
+          <a href="https://instagram.com" class="text-white hover:text-[#f59e0b] transition duration-300" target="_blank">
+            <i class="fab fa-instagram text-2xl"></i>
+          </a>
+          <a href="https://wa.me/1234567890" class="text-white hover:text-[#f59e0b] transition duration-300" target="_blank">
+            <i class="fab fa-whatsapp text-2xl"></i>
+          </a>
+          <a href="https://wa.me/1234567890" class="text-white hover:text-[#f59e0b] transition duration-300" target="_blank">
+            <i class="fab fa-whatsapp text-2xl"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Derechos de autor -->
+    <div class="border-t border-gray-700 mt-6 pt-6 text-center">
+      <p class="text-sm text-gray-300">
+        &copy; {{ currentYear }} Hidropozo. Todos los derechos reservados.
+      </p>
     </div>
   </div>
 </div>
