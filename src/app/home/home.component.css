@@ -47,14 +47,11 @@
     left: 14%;
 }
 
-.description-title {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 30px;
-    color: black;
+.titulo {
+    font-size: 100px;
+    color: white;
 }
-.services-img-container {
 
-}
 .services-container {
     width: 81%;
     height: 84%;
