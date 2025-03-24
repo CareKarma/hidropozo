@@ -3,7 +3,7 @@
   <app-header></app-header>
 </div>
 <!-- Sección de Inicio -->
-<div id="inicio" class="w-full h-[80vh] relative overflow-hidden scroll-mt-16">
+<div id="inicio" class="w-full h-65 md:relative overflow-hidden scroll-mt-16 lg:h-200">
   <div id="default-carousel" class="relative w-full h-full" data-carousel="slide">
     <!-- Carousel wrapper -->
     <div class="relative h-full overflow-hidden rounded-lg md:h-full">
@@ -79,7 +79,7 @@
       </span>
     </button>
   </div>
-  <div class="absolute inset-0 bg-opacity-40 flex flex-col items-start px-63 py-117 z-29">
+  <div class="flex md:absolute inset-0 bg-opacity-40 flex-col items-start px-26 z-29 lg: py-82">
     <h1 class="text-5xl md:text-6xl font-bold text-white mb-4 animate-fade-in bg-[#0B3B4E]/70 rounded-lg p-6 opacity-0">
       Hidropozo SRL
     </h1>
@@ -88,19 +88,6 @@
       necesidades de agua.
     </p>
   </div>
-
-  <!-- <img src="/assets/Well_drilling.jpg" alt="Hidropozo Inicio" class="object-cover w-full h-full">
-  <div class="absolute inset-0 bg-opacity-40 flex items-center justify-center">
-    <div class="text-center">
-      <h1 class="text-5xl md:text-6xl font-bold text-white mb-4 animate-fade-in">
-        Hidropozo SRL
-      </h1>
-      <p class="text-xl md:text-2xl text-white max-w-2xl mx-auto animate-fade-in-up">
-        Especialistas en perforación de pozos y mantenimiento. Soluciones confiables y eficientes para tus necesidades
-        de agua.
-      </p>
-    </div>
-  </div> -->
 </div>
 <!-- Sección de Servicios -->
 <div id="servicios" class="w-full py-16 bg-[#f0f8ff] scroll-mt-16">
@@ -123,13 +110,11 @@
               Solicitar
             </button>
           </div>
-          <p class="text-gray-600">
-            Pozos de agua
-
-            Pozos filtrantes
-
-            Pilotes
-          </p>
+          <ul class="list-disc pl-3">
+            <li class="text-gray-600">Pozos de agua</li>
+            <li class="text-gray-600">Pozos filtrantes</li>
+            <li class="text-gray-600">Pilotes</li>
+          </ul>
         </div>
       </div>
 
@@ -147,95 +132,13 @@
               Solicitar
             </button>
           </div>
-          <p class="text-gray-600">
-            Prueba de bombeo (aforo)
-
-            Infiltración
-
-            Prospección hidrogeológica de aguas subterráneas
-          </p>
+          <ul class="list-disc pl-3">
+            <li class="text-gray-600">Prueba de bombeo (aforo)</li>
+            <li class="text-gray-600">Infiltración</li>
+            <li class="text-gray-600">Prospección hidrogeológica de aguas subterráneas</li>
+          </ul>
         </div>
       </div>
-
-      <!-- Servicio 3 -->
-      <!-- <div
-        class="bg-white group rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-        <div class="h-64 bg-cover bg-center"
-          style="background-image: url('https://plus.unsplash.com/premium_photo-1661869941600-4f3a2f574804?q=80&w=2674&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
-        </div>
-        <div class="p-6">
-          <div class="flex justify-between items-center mb-2">
-            <h3 class="text-2xl font-semibold text-[#1e3a8a]">Consultoría</h3>
-            <button (click)="onRequestService('service3')"
-              class="px-4 py-2 bg-yellow-500 text-white font-bold rounded-lg hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 transition duration-200 md:opacity-0 group-hover:opacity-100">
-              Solicitar
-            </button>
-          </div>
-          <p class="text-gray-600">
-            Asesoramiento experto para optimizar el uso de recursos hídricos.
-          </p>
-        </div>
-      </div> -->
-
-      <!-- Servicio 4 -->
-      <!-- <div
-        class="bg-white group rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-        <div class="h-64 bg-cover bg-center"
-          style="background-image: url('https://plus.unsplash.com/premium_photo-1661869941600-4f3a2f574804?q=80&w=2674&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
-        </div>
-        <div class="p-6">
-          <div class="flex justify-between items-center mb-2">
-            <h3 class="text-2xl font-semibold text-[#1e3a8a]">Consultoría</h3>
-            <button (click)="onRequestService('service4')"
-              class="px-4 py-2 bg-yellow-500 text-white font-bold rounded-lg hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 transition duration-200 md:opacity-0 group-hover:opacity-100">
-              Solicitar
-            </button>
-          </div>
-          <p class="text-gray-600">
-            Asesoramiento experto para optimizar el uso de recursos hídricos.
-          </p>
-        </div>
-      </div> -->
-
-      <!-- Servicio 5 -->
-      <!-- <div
-        class="bg-white group rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-        <div class="h-64 bg-cover bg-center"
-          style="background-image: url('https://plus.unsplash.com/premium_photo-1661869941600-4f3a2f574804?q=80&w=2674&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
-        </div>
-        <div class="p-6">
-          <div class="flex justify-between items-center mb-2">
-            <h3 class="text-2xl font-semibold text-[#1e3a8a]">Consultoría</h3>
-            <button (click)="onRequestService('service5')"
-              class="px-4 py-2 bg-yellow-500 text-white font-bold rounded-lg hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 transition duration-200 md:opacity-0 group-hover:opacity-100">
-              Solicitar
-            </button>
-          </div>
-          <p class="text-gray-600">
-            Asesoramiento experto para optimizar el uso de recursos hídricos.
-          </p>
-        </div>
-      </div> -->
-
-      <!-- Servicio 6 -->
-      <!-- <div
-        class="bg-white group rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-        <div class="h-64 bg-cover bg-center"
-          style="background-image: url('https://plus.unsplash.com/premium_photo-1661869941600-4f3a2f574804?q=80&w=2674&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
-        </div>
-        <div class="p-6">
-          <div class="flex justify-between items-center mb-2">
-            <h3 class="text-2xl font-semibold text-[#1e3a8a]">Consultoría</h3>
-            <button (click)="onRequestService('service6')"
-              class="px-4 py-2 bg-yellow-500 text-white font-bold rounded-lg hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 transition duration-200 md:opacity-0 group-hover:opacity-100">
-              Solicitar
-            </button>
-          </div>
-          <p class="text-gray-600">
-            Asesoramiento experto para optimizar el uso de recursos hídricos.
-          </p>
-        </div>
-      </div> -->
     </div>
   </div>
 </div>

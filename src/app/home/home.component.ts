@@ -12,13 +12,8 @@ import { ContactFormComponent } from '../contact-form/contact-form.component';
 })
 export class HomeComponent {
   public requestDetails: { [key: string]: string } = {
-    'service1': 'Detalles del servicio 1',
-    'service2': 'Detalles del servicio 2',
-    'service3': 'Detalles del servicio 3',
-    'service4': 'Detalles del servicio 4',
-    'service5': 'Detalles del servicio 5',
-    'service6': 'Detalles del servicio 6',
-
+    'service1': 'Hola, me comunico con ustedes porque estamos interesados en contratar un servicio de perforaciones y nos gustaría recibir más información y una cotización.',
+    'service2': 'Hola, me comunico con ustedes porque estamos interesados en contratar un servicio de estudios y nos gustaría recibir más información y una cotización',
   };
 
   public selectedService: string = '';
