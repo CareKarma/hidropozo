@@ -24,7 +24,7 @@ export class ContactFormComponent implements AfterViewInit {
 
   private updateDetailsField() {
     if (this.detailsTextarea) {
-      this.detailsTextarea.value = this._details;
+      this.detailsTextarea.value = this._details ?? '';
     }
   }
 

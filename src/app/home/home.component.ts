@@ -24,7 +24,7 @@ export class HomeComponent {
   public selectedService: string = '';
 
   public onRequestService(serviceKey: string) {
-    this.selectedService = serviceKey;
+    this.selectedService = serviceKey ?? '';
     const headerComponent = new HeaderComponent();
     headerComponent.scrollToSection('#contacto', true);
 
