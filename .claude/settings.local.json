@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell($env:PATH += \";C:\\\\nvm4w\\\\nodejs\"; npm run start)",
+      "PowerShell(Get-ChildItem \"$env:APPDATA\\\\npm\" | Select-Object Name; Get-ChildItem \"C:\\\\Program Files\\\\nodejs\" -ErrorAction SilentlyContinue | Select-Object Name)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(find /c/Users/jairo/AppData/Local/nvm -name \"node.exe\" 2>/dev/null | head -3; ls /c/Users/jairo/AppData/Local/nvm/v24.15.0/ 2>/dev/null | grep -E \"node|npm\")"
+    ]
+  }
+}
