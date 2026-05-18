@@ -17,19 +17,22 @@
       <div class="hidden duration-700 ease-in-out" data-carousel-item>
         <img
           src="/assets/pexels-freek-wolsink-508219-31249535.jpg"
-          class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+          loading="lazy"
+          class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Perforación de pozos">
       </div>
       <!-- Item 3 -->
       <div class="hidden duration-700 ease-in-out" data-carousel-item>
         <img
           src="assets/pexels-freek-wolsink-508219-31249554.jpg"
-          class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+          loading="lazy"
+          class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Equipo de perforación">
       </div>
       <!-- Item 4 -->
       <div class="hidden duration-700 ease-in-out" data-carousel-item>
         <img
           src="assets/pexels-yury-kim-181374-585419.jpg"
-          class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+          loading="lazy"
+          class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Servicio de agua">
       </div>
     </div>
     <!-- Slider indicators -->
@@ -189,7 +192,7 @@
     <h2 class="text-4xl md:text-5xl font-bold text-center text-[#1e3a8a] mb-12">
       Contacto
     </h2>
-    <app-contact-form [details]="requestDetails[selectedService]"></app-contact-form>
+    <app-contact-form [details]="selectedDetails"></app-contact-form>
   </div>
 </div>
 

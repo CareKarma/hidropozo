@@ -14,14 +14,15 @@
 
     <div class="space-y-2">
       <label for="message" class="block text-lg font-semibold text-gray-800">Detalles:</label>
-      <textarea id="message" name="details" required
-                class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition duration-200" rows="4"></textarea>
+      <textarea id="message" name="details" required rows="4"
+                [(ngModel)]="detailsValue"
+                class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition duration-200"></textarea>
     </div>
 
     <div class="text-center">
-      <button type="submit"
-              class="px-8 py-3 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition duration-200 transform hover:scale-105">
-        Enviar
+      <button type="submit" [disabled]="isSending"
+              class="px-8 py-3 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition duration-200 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:scale-100">
+        {{ isSending ? 'Enviando...' : 'Enviar' }}
       </button>
     </div>
   </form>
