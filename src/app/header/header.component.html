@@ -1,22 +1,63 @@
 <div class="w-full bg-[#cddbee] shadow-sm">
   <header class="header">
-      <div class="container mx-auto flex items-center justify-between py-4 px-4 md:px-8">
-          <!-- Logo -->
-          <div class="flex items-center mb-3">
-            <img src="/assets/IconOnly_Transparent_NoBuffer.png" alt="Hidropozo Logo" class="h-14 mr-4">
-            <span class="text-2xl font-bold text-white">
-              HIDROPOZO
-              <span class="text-sm align-super">SRL</span>
-            </span>
-          </div>
-
-          <!-- Menú de navegación (visible en desktop) -->
-          <div class="hidden md:flex items-center gap-8">
-              <a href="javascript:void(0)" (click)="scrollToSection('#inicio')" class="text-[#fff] hover:text-[#f59e0b] transition duration-300">Inicio</a>
-              <a href="javascript:void(0)" (click)="scrollToSection('#servicios')" class="text-[#fff] hover:text-[#f59e0b] transition duration-300">Servicios</a>
-              <a href="javascript:void(0)" (click)="scrollToSection('#nosotros')" class="text-[#fff] hover:text-[#f59e0b] transition duration-300">Nosotros</a>
-              <a href="javascript:void(0)" (click)="scrollToSection('#contacto')" class="text-[#fff] hover:text-[#f59e0b] transition duration-300">Contacto</a>
-          </div>
+    <div class="container mx-auto flex items-center justify-between py-4 px-4 md:px-8">
+      <!-- Logo -->
+      <div class="flex items-center">
+        <img src="/assets/IconOnly_Transparent_NoBuffer.png" alt="Hidropozo Logo" class="h-14 mr-4">
+        <span class="text-2xl font-bold text-white">
+          HIDROPOZO
+          <span class="text-sm align-super">SRL</span>
+        </span>
       </div>
+
+      <!-- Menú de navegación (visible en desktop) -->
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="javascript:void(0)" (click)="scrollToSection('#inicio')"
+           class="nav-link font-medium transition duration-300 hover:text-[#f59e0b]"
+           [class.active]="activeSection === 'inicio'">Inicio</a>
+        <a href="javascript:void(0)" (click)="scrollToSection('#servicios')"
+           class="nav-link font-medium transition duration-300 hover:text-[#f59e0b]"
+           [class.active]="activeSection === 'servicios'">Servicios</a>
+        <a href="javascript:void(0)" (click)="scrollToSection('#nosotros')"
+           class="nav-link font-medium transition duration-300 hover:text-[#f59e0b]"
+           [class.active]="activeSection === 'nosotros'">Nosotros</a>
+        <a href="javascript:void(0)" (click)="scrollToSection('#contacto')"
+           class="nav-link font-medium transition duration-300 hover:text-[#f59e0b]"
+           [class.active]="activeSection === 'contacto'">Contacto</a>
+      </nav>
+
+      <!-- Botón hamburguesa (visible en móvil) -->
+      <button type="button" (click)="toggleMobileMenu()"
+              class="md:hidden text-white focus:outline-none p-2"
+              aria-label="Abrir menú de navegación">
+        @if (!isMobileMenuOpen) {
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        } @else {
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        }
+      </button>
+    </div>
+
+    <!-- Menú móvil desplegable -->
+    @if (isMobileMenuOpen) {
+      <nav class="md:hidden border-t border-white/20 px-4 py-2 bg-[#0B3B4E]">
+        <a href="javascript:void(0)" (click)="scrollToSection('#inicio')"
+           class="nav-link block py-3 transition duration-300 hover:text-[#f59e0b]"
+           [class.active]="activeSection === 'inicio'">Inicio</a>
+        <a href="javascript:void(0)" (click)="scrollToSection('#servicios')"
+           class="nav-link block py-3 transition duration-300 hover:text-[#f59e0b]"
+           [class.active]="activeSection === 'servicios'">Servicios</a>
+        <a href="javascript:void(0)" (click)="scrollToSection('#nosotros')"
+           class="nav-link block py-3 transition duration-300 hover:text-[#f59e0b]"
+           [class.active]="activeSection === 'nosotros'">Nosotros</a>
+        <a href="javascript:void(0)" (click)="scrollToSection('#contacto')"
+           class="nav-link block py-3 transition duration-300 hover:text-[#f59e0b]"
+           [class.active]="activeSection === 'contacto'">Contacto</a>
+      </nav>
+    }
   </header>
 </div>
