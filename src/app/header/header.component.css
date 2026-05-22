@@ -1,20 +1,39 @@
+/* Header fijo: siempre visible encima del contenido */
 .header {
   position: fixed;
   top: 0;
   width: 100%;
   background-color: #0B3B4E;
   z-index: 9999;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.25);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.header img {
-  height: 50px;
-}
-
+/* Color base de los enlaces nav */
 .nav-link {
-  color: #ffffff;
+  color: #cbd5e1;
+  position: relative;
 }
 
+/* Subrayado animado al hacer hover (solo aplica en desktop) */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #f59e0b;
+  transition: width 0.3s ease;
+  border-radius: 1px;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Enlace activo: amarillo */
 .nav-link.active {
   color: #f59e0b;
 }

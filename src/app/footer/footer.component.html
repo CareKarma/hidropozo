@@ -1,63 +1,79 @@
-<div class="footer z-999 md:fixed bottom-0 left-0 w-full bg-[#072733] text-white transition-all duration-500 transform translate-y-45 hover:translate-y-0"
-     [ngClass]="{'translate-y-0': isFooterVisible}">
-  <div class="container mx-auto px-4 md:px-8">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 py-6">
-      <!-- Sección 1: Logo y descripción -->
-      <div class="mb-6 md:mb-0">
-        <div class="flex items-center mb-3"> <!-- Contenedor flex para logo y texto -->
-          <img src="/assets/IconOnly_Transparent_NoBuffer.png" alt="Hidropozo Logo" class="h-14 mr-4">
-          <span class="text-2xl font-bold text-white">
-            HIDROPOZO
-            <span class="text-sm align-super">SRL</span>
-          </span>
+<!-- Footer estático: ya no está fixed/oculto, siempre visible al final de la página -->
+<footer class="w-full bg-[#072733] text-white">
 
+  <div class="container mx-auto px-4 md:px-8 py-12">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+
+      <!-- Sección 1: Logo y descripción -->
+      <div>
+        <div class="flex items-center gap-3 mb-4">
+          <img src="/assets/IconOnly_Transparent_NoBuffer.png" alt="Hidropozo Logo" class="h-12">
+          <span class="text-xl font-bold text-white leading-none">
+            HIDROPOZO<span class="text-xs align-super ml-0.5 font-semibold">SRL</span>
+          </span>
         </div>
-        <p class="text-sm text-gray-300">
-          Especialistas en perforación de pozos y mantenimiento. Soluciones confiables y eficientes.
+        <p class="text-sm text-slate-400 leading-relaxed">
+          Especialistas en perforación de pozos y mantenimiento. Soluciones confiables y eficientes
+          para sus necesidades hídricas.
         </p>
       </div>
 
       <!-- Sección 2: Información de contacto -->
-      <div class="mb-6 md:mb-0">
-        <h3 class="text-lg font-semibold mb-3 text-[#f59e0b]">Contacto</h3>
-        <ul class="space-y-2 text-gray-300">
-          <li class="flex items-start">
-            <i class="fas fa-map-marker-alt text-[#f59e0b] mr-2 mt-1"></i>
-            <span> Santo Domingo, Calle Santos Vilorio 17, manzana 8A Colonia de los Doctores</span>
+      <div>
+        <h3 class="text-sm font-bold mb-4 text-[#f59e0b] uppercase tracking-wider">Contacto</h3>
+        <ul class="space-y-3 text-sm text-slate-400">
+          <li class="flex items-start gap-3">
+            <i class="fas fa-map-marker-alt text-[#f59e0b] mt-0.5 shrink-0 w-4 text-center"></i>
+            <span>Santo Domingo, Calle Santos Vilorio 17, manzana 8A, Colonia de los Doctores</span>
           </li>
-          <li class="flex items-center">
-            <i class="fas fa-phone-alt text-[#f59e0b] mr-2"></i>
-            <span>Teléfono: 829-359-3011</span>
+          <li class="flex items-center gap-3">
+            <i class="fas fa-phone-alt text-[#f59e0b] shrink-0 w-4 text-center"></i>
+            <a href="tel:8293593011" class="hover:text-white transition-colors">829-359-3011</a>
           </li>
-          <li class="flex items-center">
-            <i class="fas fa-envelope text-[#f59e0b] mr-2"></i>
-            <span>Email: hidropozo&#64;hotmail.com</span>
+          <li class="flex items-center gap-3">
+            <i class="fas fa-envelope text-[#f59e0b] shrink-0 w-4 text-center"></i>
+            <a href="mailto:hidropozo@hotmail.com" class="hover:text-white transition-colors">
+              hidropozo&#64;hotmail.com
+            </a>
           </li>
         </ul>
       </div>
 
       <!-- Sección 3: Redes sociales -->
       <div>
-        <h3 class="text-lg font-semibold mb-3 text-[#f59e0b]">Síguenos</h3>
-        <div class="social-links flex gap-4">
-          <a href="https://www.instagram.com/hidropozosrl" class="text-white hover:text-[#f59e0b] transition duration-300" target="_blank">
-            <i class="fab fa-instagram text-2xl"></i>
+        <h3 class="text-sm font-bold mb-4 text-[#f59e0b] uppercase tracking-wider">Síguenos</h3>
+        <div class="flex gap-3 mb-4">
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/hidropozosrl"
+             class="w-10 h-10 rounded-full bg-white/10 hover:bg-[#f59e0b] flex items-center justify-center transition-all duration-300"
+             target="_blank" rel="noopener noreferrer" aria-label="Instagram Hidropozo">
+            <i class="fab fa-instagram text-lg"></i>
           </a>
-          <a href="https://wa.me/8293593011" class="text-white hover:text-[#f59e0b] transition duration-300" target="_blank">
-            <i class="fab fa-whatsapp text-2xl"></i>
+          <!-- WhatsApp 1 -->
+          <a href="https://wa.me/8293593011"
+             class="w-10 h-10 rounded-full bg-white/10 hover:bg-[#25D366] flex items-center justify-center transition-all duration-300"
+             target="_blank" rel="noopener noreferrer" aria-label="WhatsApp 829-359-3011">
+            <i class="fab fa-whatsapp text-lg"></i>
           </a>
-          <a href="https://wa.me/8297168571" class="text-white hover:text-[#f59e0b] transition duration-300" target="_blank">
-            <i class="fab fa-whatsapp text-2xl"></i>
+          <!-- WhatsApp 2 -->
+          <a href="https://wa.me/8297168571"
+             class="w-10 h-10 rounded-full bg-white/10 hover:bg-[#25D366] flex items-center justify-center transition-all duration-300"
+             target="_blank" rel="noopener noreferrer" aria-label="WhatsApp 829-716-8571">
+            <i class="fab fa-whatsapp text-lg"></i>
           </a>
         </div>
+        <p class="text-xs text-slate-500">WhatsApp: 829-359-3011 · 829-716-8571</p>
       </div>
     </div>
+  </div>
 
-    <!-- Derechos de autor -->
-    <div class="border-t border-gray-700 mt-6 pt-6 text-center">
-      <p class="text-sm text-gray-300">
-        &copy; {{ currentYear }} Hidropozo. Todos los derechos reservados.
+  <!-- Barra de derechos de autor -->
+  <div class="border-t border-white/10">
+    <div class="container mx-auto px-4 md:px-8 py-4 text-center">
+      <p class="text-xs text-slate-500">
+        &copy; {{ currentYear }} Hidropozo SRL. Todos los derechos reservados.
       </p>
     </div>
   </div>
-</div>
+
+</footer>
