@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { ReactiveFormsModule, FormGroup, FormControl, Validators } from '@angular/forms';
 import emailjs from '@emailjs/browser';
 import Swal from 'sweetalert2';
@@ -12,6 +12,8 @@ import { environment } from '../../environments/environment';
   styleUrls: ['./contact-form.component.css']
 })
 export class ContactFormComponent {
+  @ViewChild('contactForm') contactFormEl!: ElementRef<HTMLFormElement>;
+
   isSending = false;
 
   form = new FormGroup({
@@ -36,13 +38,11 @@ export class ContactFormComponent {
     if (this.isSending) return;
     this.isSending = true;
 
-    const { name, email, details } = this.form.value;
-
     emailjs
-      .send(
+      .sendForm(
         environment.emailjs.serviceId,
         environment.emailjs.templateId,
-        { name, email, details },
+        this.contactFormEl.nativeElement,
         environment.emailjs.publicKey
       )
       .then(
@@ -57,7 +57,8 @@ export class ContactFormComponent {
           this.form.reset();
           this.isSending = false;
         },
-        () => {
+        (error) => {
+          console.error('EmailJS error:', error);
           Swal.fire({
             title: 'Error',
             text: 'Hubo un problema al enviar el mensaje. Por favor, inténtalo de nuevo.',
