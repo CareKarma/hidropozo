@@ -143,10 +143,10 @@
       <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col">
         <!-- Imagen con degradado y título superpuesto -->
         <div class="relative h-56 overflow-hidden">
-          <img src="assets/images/hidropozo-perforacion-3.jpg"
+          <img ngSrc="assets/images/hidropozo-perforacion-3.jpg"
                alt="Perforación de pozos"
-               loading="lazy"
-               class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+               fill
+               class="object-cover object-center hover:scale-105 transition-transform duration-500">
           <div class="absolute inset-0 bg-gradient-to-t from-black/65 to-transparent"></div>
           <span class="absolute bottom-4 left-4 text-white font-extrabold text-xl tracking-wide drop-shadow">Perforaciones</span>
         </div>
@@ -182,10 +182,10 @@
       <!-- Servicio 2: Estudios -->
       <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col">
         <div class="relative h-56 overflow-hidden">
-          <img src="assets/pexels-rezwan-1216589.jpg"
+          <img ngSrc="assets/pexels-rezwan-1216589.jpg"
                alt="Estudios hidrogeológicos"
-               loading="lazy"
-               class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+               fill
+               class="object-cover object-center hover:scale-105 transition-transform duration-500">
           <div class="absolute inset-0 bg-gradient-to-t from-black/65 to-transparent"></div>
           <span class="absolute bottom-4 left-4 text-white font-extrabold text-xl tracking-wide drop-shadow">Estudios</span>
         </div>
@@ -233,11 +233,11 @@
 
     <!-- Primera fila: imagen izquierda, texto derecha -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center mb-16">
-      <div class="rounded-2xl shadow-lg overflow-hidden h-72 md:h-96 order-1">
-        <img src="/assets/images/hidropozo-perforacion-2.jpg"
+      <div class="relative rounded-2xl shadow-lg overflow-hidden h-72 md:h-96 order-1">
+        <img ngSrc="assets/images/hidropozo-perforacion-2.jpg"
              alt="Equipo de Hidropozo trabajando en campo"
-             loading="lazy"
-             class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+             fill
+             class="object-cover hover:scale-105 transition-transform duration-500">
       </div>
       <div class="order-2 space-y-5">
         <p class="text-base md:text-lg text-gray-700 leading-relaxed">
@@ -271,11 +271,11 @@
           la preservación y el uso sostenible de los recursos hídricos, contribuyendo al bienestar de nuestras comunidades.
         </p>
       </div>
-      <div class="rounded-2xl shadow-lg overflow-hidden h-72 md:h-96 order-1 md:order-2">
-        <img src="/assets/images/hidropozo-perforacion-1.jpg"
+      <div class="relative rounded-2xl shadow-lg overflow-hidden h-72 md:h-96 order-1 md:order-2">
+        <img ngSrc="assets/images/hidropozo-perforacion-1.jpg"
              alt="Proyecto de perforación Hidropozo"
-             loading="lazy"
-             class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+             fill
+             class="object-cover hover:scale-105 transition-transform duration-500">
       </div>
     </div>
 
@@ -285,12 +285,63 @@
 <!-- ===== SECCIÓN CONTACTO ===== -->
 <section id="contacto" class="w-full py-20 bg-slate-50 scroll-mt-[72px]">
   <div class="container mx-auto px-4">
+
     <div class="text-center mb-14">
       <p class="text-[#f59e0b] font-semibold uppercase tracking-widest text-xs md:text-sm mb-2">Estamos para servirle</p>
       <h2 class="text-3xl md:text-5xl font-extrabold text-[#0B3B4E]">Contáctenos</h2>
       <div class="mx-auto mt-4 w-16 h-1 bg-[#f59e0b] rounded-full"></div>
     </div>
-    <app-contact-form></app-contact-form>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 max-w-6xl mx-auto items-start">
+
+      <!-- Columna izquierda: mapa + info -->
+      <div class="space-y-6">
+
+        <!-- Mapa -->
+        <div class="rounded-2xl overflow-hidden shadow-md">
+          <iframe
+            title="Ubicación Hidropozo SRL"
+            src="https://maps.google.com/maps?q=Calle+Santos+Vilorio+17,+Colonia+de+los+Doctores,+Santo+Domingo,+Republica+Dominicana&output=embed&z=15"
+            width="100%"
+            height="280"
+            style="border:0;"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <!-- Horario de atención -->
+        <div class="bg-white rounded-2xl shadow-md p-6 space-y-4">
+          <h3 class="text-sm font-bold text-[#f59e0b] uppercase tracking-wider">Horario de atención</h3>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li class="flex justify-between">
+              <span class="font-medium text-gray-700">Lunes – Viernes</span>
+              <span>8:00 AM – 5:00 PM</span>
+            </li>
+            <li class="flex justify-between">
+              <span class="font-medium text-gray-700">Sábado</span>
+              <span>8:00 AM – 12:00 PM</span>
+            </li>
+            <li class="flex justify-between">
+              <span class="font-medium text-gray-700">Domingo</span>
+              <span class="text-gray-400">Cerrado</span>
+            </li>
+          </ul>
+          <div class="pt-2 border-t border-gray-100 flex items-center gap-2 text-sm text-gray-500">
+            <i class="fas fa-phone-alt text-[#f59e0b] text-xs"></i>
+            <span>Emergencias 24/7: <a href="tel:8293593011" class="font-semibold text-[#0B3B4E] hover:underline">829-359-3011</a></span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Columna derecha: formulario -->
+      <div>
+        <app-contact-form></app-contact-form>
+      </div>
+
+    </div>
   </div>
 </section>
 
