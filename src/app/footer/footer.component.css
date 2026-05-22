@@ -1,12 +1,2 @@
-.footer {
-}
-
-.footer .social-links a {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.footer .social-links i {
-    font-size: 1.25rem;
-}
+/* Footer estático — los estilos de layout y colores se manejan con Tailwind.
+   Este archivo se deja limpio; agregar aquí solo si se necesitan overrides específicos. */

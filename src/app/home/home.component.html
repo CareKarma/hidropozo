@@ -1,200 +1,298 @@
-<!-- Header -->
-<div class="w-full h-[93px]">
+<!-- Espaciador: ocupa el lugar del header fixed (altura exacta = 72px) -->
+<div class="h-[72px]">
   <app-header></app-header>
 </div>
-<!-- Sección de Inicio -->
-<div id="inicio" class="w-full h-65 md:relative overflow-hidden scroll-mt-16 lg:h-200">
-  <div id="default-carousel" class="relative w-full h-full" data-carousel="slide">
-    <!-- Carousel wrapper -->
-    <div class="relative h-full overflow-hidden rounded-lg md:h-full">
-      <!-- Item 1 -->
-      <div class="hidden duration-700 ease-in-out" data-carousel-item>
-        <img
-          src="assets/pexels-rasha-saadeh-1406583898-26508410.jpg"
-          class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+
+<!-- ===== SECCIÓN INICIO / HERO ===== -->
+<section id="inicio" class="relative w-full h-[65vh] md:h-[80vh] lg:h-screen overflow-hidden scroll-mt-[72px]">
+
+  <!-- Carousel Flowbite -->
+  <div id="hero-carousel" class="relative w-full h-full" data-carousel="slide">
+    <div class="relative h-full overflow-hidden">
+
+      <!-- Slide 1: activo por defecto (data-carousel-item="active" + sin clase hidden) -->
+      <div class="duration-1000 ease-in-out" data-carousel-item="active">
+        <img src="assets/images/hidropozo-perforacion-3.jpg"
+             class="absolute w-full h-full object-cover object-center"
+             alt="Equipo de perforación Hidropozo"
+             fetchpriority="high">
       </div>
-      <!-- Item 2 -->
-      <div class="hidden duration-700 ease-in-out" data-carousel-item>
-        <img
-          src="/assets/pexels-freek-wolsink-508219-31249535.jpg"
-          loading="lazy"
-          class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Perforación de pozos">
+
+      <!-- Slide 2 -->
+      <div class="hidden duration-1000 ease-in-out" data-carousel-item>
+        <img src="assets/images/hidropozo-perforacion-2.jpg"
+             loading="lazy"
+             class="absolute w-full h-full object-cover object-center"
+             alt="Perforación de pozos Hidropozo">
       </div>
-      <!-- Item 3 -->
-      <div class="hidden duration-700 ease-in-out" data-carousel-item>
-        <img
-          src="assets/pexels-freek-wolsink-508219-31249554.jpg"
-          loading="lazy"
-          class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Equipo de perforación">
+
+      <!-- Slide 3 -->
+      <div class="hidden duration-1000 ease-in-out" data-carousel-item>
+        <img src="assets/images/hidropozo-perforacion-1.jpg"
+             loading="lazy"
+             class="absolute w-full h-full object-cover object-center"
+             alt="Trabajadores Hidropozo en obra">
       </div>
-      <!-- Item 4 -->
-      <div class="hidden duration-700 ease-in-out" data-carousel-item>
-        <img
-          src="assets/pexels-yury-kim-181374-585419.jpg"
-          loading="lazy"
-          class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Servicio de agua">
+
+      <!-- Slide 4 -->
+      <div class="hidden duration-1000 ease-in-out" data-carousel-item>
+        <img src="assets/images/hidropozo-perforacion-4.jpg"
+             loading="lazy"
+             class="absolute w-full h-full object-cover object-center"
+             alt="Operación de perforación Hidropozo">
       </div>
     </div>
-    <!-- Slider indicators -->
-    <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 gap-3 rtl:space-x-reverse">
-      <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1"
-        data-carousel-slide-to="0"></button>
-      <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2"
-        data-carousel-slide-to="1"></button>
-      <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3"
-        data-carousel-slide-to="2"></button>
-      <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4"
-        data-carousel-slide-to="3"></button>
-      <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5"
-        data-carousel-slide-to="4"></button>
+
+    <!-- Indicadores: z-[40] para estar encima del texto del hero (z-[35]) -->
+    <div class="absolute z-[40] flex gap-3 bottom-6 left-1/2 -translate-x-1/2">
+      <button type="button" class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all duration-300" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+      <button type="button" class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all duration-300" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+      <button type="button" class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all duration-300" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+      <button type="button" class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all duration-300" aria-label="Slide 4" data-carousel-slide-to="3"></button>
     </div>
-    <!-- Slider controls -->
+
+    <!-- Botón: anterior — z-[40] para estar sobre el texto del hero -->
     <button type="button"
-      class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-      data-carousel-prev>
-      <span
-        class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-        <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M5 1 1 5l4 4" />
+            class="absolute top-0 left-0 z-[40] flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            data-carousel-prev>
+      <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-black/20 backdrop-blur-sm group-hover:bg-black/40 transition">
+        <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 6 10" xmlns="http://www.w3.org/2000/svg">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
         </svg>
-        <span class="sr-only">Previous</span>
+        <span class="sr-only">Anterior</span>
       </span>
     </button>
+
+    <!-- Botón: siguiente — z-[40] para estar sobre el texto del hero -->
     <button type="button"
-      class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-      data-carousel-next>
-      <span
-        class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-        <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="m1 9 4-4-4-4" />
+            class="absolute top-0 right-0 z-[40] flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            data-carousel-next>
+      <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-black/20 backdrop-blur-sm group-hover:bg-black/40 transition">
+        <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 6 10" xmlns="http://www.w3.org/2000/svg">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
         </svg>
-        <span class="sr-only">Next</span>
+        <span class="sr-only">Siguiente</span>
       </span>
     </button>
   </div>
-  <div class="flex md:absolute inset-0 bg-opacity-40 flex-col items-start px-26 z-29 lg:py-82">
-    <h1 class="text-5xl md:text-6xl font-bold text-white mb-4 animate-fade-in bg-[#0B3B4E]/70 rounded-lg p-6 opacity-0">
-      Hidropozo<span class="text-xl md:text-2xl align-super ml-1">SRL</span>
+
+  <!-- Gradiente: z-[22] para estar encima del slide activo de Flowbite (z=20) -->
+  <div class="absolute inset-0 bg-gradient-to-r from-[#0B3B4E]/85 via-[#0B3B4E]/45 to-transparent z-[22] pointer-events-none"></div>
+
+  <!-- Texto del hero: z-[35] encima del gradiente, debajo de los botones del carousel (z-[40]) -->
+  <div class="absolute inset-0 z-[35] flex flex-col justify-center px-6 sm:px-12 md:px-16 lg:px-24 pointer-events-none">
+    <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-4 animate-hero-in leading-tight drop-shadow-lg">
+      HIDROPOZO<span class="text-xl sm:text-2xl md:text-3xl align-super ml-1 font-bold">SRL</span>
     </h1>
-    <p class="text-xl md:text-2xl text-white max-w-2xl animate-fade-in-up bg-black/70 rounded-lg p-6 opacity-0">
-      Especialistas en perforación de pozos y mantenimiento. Soluciones confiables y eficientes para tus
-      necesidades de agua.
+    <p class="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 max-w-xl mb-8 animate-hero-in-up leading-relaxed drop-shadow">
+      Especialistas en perforación de pozos y mantenimiento. Soluciones confiables y eficientes para sus necesidades de agua.
     </p>
-</div>
-</div>
-<!-- Sección de Servicios -->
-<div id="servicios" class="w-full py-16 bg-[#f0f8ff] scroll-mt-16">
-  <div class="container mx-auto px-4 h-full">
-    <h2 class="text-4xl md:text-5xl font-bold text-center text-[#1e3a8a] mb-12">
-      Nuestros Servicios
-    </h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <!-- Servicio 1 -->
-      <div
-        class="bg-white group rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-        <div class="h-94 bg-cover bg-center bg-[url(/assets/pexels-freek-wolsink-508219-31249535.jpg)]">
-        </div>
-        <div class="p-6">
-          <div class="flex justify-between items-center mb-2">
-            <h3 class="text-2xl font-semibold text-[#1e3a8a]">Perforaciones</h3>
-            <button (click)="onRequestService('service1')"
-              class="px-4 py-2 bg-yellow-500 text-white font-bold rounded-lg hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 transition duration-200 opacity-100 md:opacity-0 group-hover:md:opacity-100">
-              Solicitar
-            </button>
-          </div>
-          <ul class="list-disc pl-3">
-            <li class="text-gray-600">Pozos de agua</li>
-            <li class="text-gray-600">Pozos filtrantes</li>
-            <li class="text-gray-600">Pilotes</li>
-          </ul>
-        </div>
-      </div>
+    <!-- pointer-events-auto para que los botones sean clickeables dentro del div no-interactivo -->
+    <div class="flex flex-wrap gap-4 animate-hero-in-up pointer-events-auto">
+      <button (click)="onRequestService('service1')"
+              class="px-6 py-3 bg-[#f59e0b] hover:bg-[#d97706] text-white font-bold rounded-lg transition-all duration-300 hover:scale-105 shadow-lg text-sm md:text-base">
+        Solicitar Servicio
+      </button>
+      <button (click)="scrollToSection('#nosotros')"
+              class="px-6 py-3 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-[#0B3B4E] transition-all duration-300 text-sm md:text-base">
+        Conócenos
+      </button>
+    </div>
+  </div>
 
-      <!-- Servicio 2 -->
-      <div
-        class="bg-white group rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-        <div class="h-94 bg-cover bg-center"
-          style="background-image: url('assets/pexels-rezwan-1216589.jpg');">
-        </div>
-        <div class="p-6">
-          <div class="flex justify-between items-center mb-2">
-            <h3 class="text-2xl font-semibold text-[#1e3a8a]">Estudios</h3>
-            <button (click)="onRequestService('service2')"
-              class="px-4 py-2 bg-yellow-500 text-white font-bold rounded-lg hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 transition duration-200 md:opacity-0 group-hover:opacity-100">
-              Solicitar
-            </button>
-          </div>
-          <ul class="list-disc pl-3">
-            <li class="text-gray-600">Prueba de bombeo (aforo)</li>
-            <li class="text-gray-600">Infiltración</li>
-            <li class="text-gray-600">Prospección hidrogeológica de aguas subterráneas</li>
-          </ul>
-        </div>
+</section>
+
+<!-- ===== BARRA DE ESTADÍSTICAS ===== -->
+<section class="w-full bg-[#0B3B4E] py-8 md:py-10">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-white">
+      <div>
+        <p class="text-3xl md:text-4xl font-extrabold text-[#f59e0b]">+30</p>
+        <p class="text-xs md:text-sm mt-1 text-slate-300 uppercase tracking-wide">Años de experiencia</p>
+      </div>
+      <div>
+        <p class="text-3xl md:text-4xl font-extrabold text-[#f59e0b]">500+</p>
+        <p class="text-xs md:text-sm mt-1 text-slate-300 uppercase tracking-wide">Pozos perforados</p>
+      </div>
+      <div>
+        <p class="text-3xl md:text-4xl font-extrabold text-[#f59e0b]">100%</p>
+        <p class="text-xs md:text-sm mt-1 text-slate-300 uppercase tracking-wide">Compromiso</p>
+      </div>
+      <div>
+        <p class="text-3xl md:text-4xl font-extrabold text-[#f59e0b]">24/7</p>
+        <p class="text-xs md:text-sm mt-1 text-slate-300 uppercase tracking-wide">Soporte técnico</p>
       </div>
     </div>
   </div>
-</div>
-<!-- Sección de Nosotros -->
-<div id="nosotros" class="w-full py-16 bg-white scroll-mt-16">
-  <div class="container mx-auto px-4">
-    <h2 class="text-4xl md:text-5xl font-bold text-center text-[#1e3a8a] mb-12">
-      Nosotros
-    </h2>
+</section>
 
-    <!-- Primera fila: Imagen a la izquierda, texto a la derecha -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
-      <div class="h-96 bg-cover bg-center rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 overflow-hidden order-1 md:order-1">
-        <img src="/assets/pexels-aleksey-2053893-3680959.jpg"
-             alt="Equipo de Hidropozo trabajando"
-             class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-      </div>
-      <div class="order-2 md:order-2">
-        <p class="text-lg md:text-xl text-gray-700 mb-6 text-justify leading-relaxed">
-          <strong class="text-[#1e3a8a]">HIDROPOZO<span class="text-base align-super ml-0.5">SRL</span></strong> es una empresa con más de 30 años de experiencia en el sector de la
-          ingeniería hidráulica, especializada en la construcción de pozos filtrantes, estudios hidrogeológicos, pruebas de infiltración, aforo
-          de pozos y perforaciones de alta calidad.
-        </p>
-        <p class="text-lg md:text-xl text-gray-700 mb-6 text-justify leading-relaxed">
-          Desde nuestra fundación, hemos trabajado para ofrecer soluciones innovadoras y eficientes en la gestión de recursos hídricos, siempre enfocados en la sostenibilidad y la excelencia técnica.
-        </p>
-        <p class="text-lg md:text-xl text-gray-700 text-justify leading-relaxed">
-          A lo largo de los años, nos hemos consolidado como líderes en la construcción y mantenimiento de sistemas de captación de agua subterránea, adaptándonos a las necesidades de nuestros clientes y los avances tecnológicos del sector.
-        </p>
-      </div>
+<!-- ===== SECCIÓN SERVICIOS ===== -->
+<section id="servicios" class="w-full py-20 bg-slate-50 scroll-mt-[72px]">
+  <div class="container mx-auto px-4">
+
+    <!-- Encabezado con subrayado acento -->
+    <div class="text-center mb-14">
+      <p class="text-[#f59e0b] font-semibold uppercase tracking-widest text-xs md:text-sm mb-2">Lo que ofrecemos</p>
+      <h2 class="text-3xl md:text-5xl font-extrabold text-[#0B3B4E]">Nuestros Servicios</h2>
+      <div class="mx-auto mt-4 w-16 h-1 bg-[#f59e0b] rounded-full"></div>
     </div>
 
-    <!-- Segunda fila: Texto a la izquierda, imagen a la derecha -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-      <div class="order-2 md:order-1">
-        <p class="text-lg md:text-xl text-gray-700 mb-6 text-justify leading-relaxed">
-          Contamos con un equipo altamente capacitado y comprometido con la calidad, la seguridad y el cumplimiento de las normativas vigentes. Nuestra misión es garantizar un servicio eficiente, responsable y con altos estándares de calidad en cada proyecto.
-        </p>
-        <p class="text-lg md:text-xl text-gray-700 text-justify leading-relaxed">
-          En <strong class="text-[#1e3a8a]">HIDROPOZO<span class="text-base align-super ml-0.5">SRL</span></strong>, trabajamos para brindar soluciones integrales en la perforación y manejo de aguas subterráneas, promoviendo la preservación y el uso sostenible de los recursos hídricos, contribuyendo al bienestar de nuestras comunidades.
-        </p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+
+      <!-- Servicio 1: Perforaciones -->
+      <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col">
+        <!-- Imagen con degradado y título superpuesto -->
+        <div class="relative h-56 overflow-hidden">
+          <img src="assets/images/hidropozo-perforacion-3.jpg"
+               alt="Perforación de pozos"
+               loading="lazy"
+               class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/65 to-transparent"></div>
+          <span class="absolute bottom-4 left-4 text-white font-extrabold text-xl tracking-wide drop-shadow">Perforaciones</span>
+        </div>
+        <!-- Contenido -->
+        <div class="p-6 flex flex-col flex-1">
+          <ul class="space-y-3 mb-6 flex-1 text-gray-600">
+            <li class="flex items-center gap-2.5">
+              <svg class="w-4 h-4 text-[#f59e0b] shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586 4.707 9.293a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l8-8a1 1 0 000-1.414z" clip-rule="evenodd"/>
+              </svg>
+              <span>Pozos de agua</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <svg class="w-4 h-4 text-[#f59e0b] shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586 4.707 9.293a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l8-8a1 1 0 000-1.414z" clip-rule="evenodd"/>
+              </svg>
+              <span>Pozos filtrantes</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <svg class="w-4 h-4 text-[#f59e0b] shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586 4.707 9.293a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l8-8a1 1 0 000-1.414z" clip-rule="evenodd"/>
+              </svg>
+              <span>Pilotes</span>
+            </li>
+          </ul>
+          <button (click)="onRequestService('service1')"
+                  class="w-full py-3 bg-[#0B3B4E] hover:bg-[#0d4a62] text-white font-semibold rounded-xl transition-colors duration-200 text-sm">
+            Solicitar Cotización
+          </button>
+        </div>
       </div>
-      <div class="h-96 bg-cover bg-center rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 overflow-hidden order-1 md:order-2">
-        <img src="/assets/pexels-rahul-bokhare-260663903-21047659.jpg"
-             alt="Proyectos de Hidropozo"
-             class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+
+      <!-- Servicio 2: Estudios -->
+      <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col">
+        <div class="relative h-56 overflow-hidden">
+          <img src="assets/pexels-rezwan-1216589.jpg"
+               alt="Estudios hidrogeológicos"
+               loading="lazy"
+               class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/65 to-transparent"></div>
+          <span class="absolute bottom-4 left-4 text-white font-extrabold text-xl tracking-wide drop-shadow">Estudios</span>
+        </div>
+        <div class="p-6 flex flex-col flex-1">
+          <ul class="space-y-3 mb-6 flex-1 text-gray-600">
+            <li class="flex items-center gap-2.5">
+              <svg class="w-4 h-4 text-[#f59e0b] shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586 4.707 9.293a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l8-8a1 1 0 000-1.414z" clip-rule="evenodd"/>
+              </svg>
+              <span>Prueba de bombeo (aforo)</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <svg class="w-4 h-4 text-[#f59e0b] shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586 4.707 9.293a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l8-8a1 1 0 000-1.414z" clip-rule="evenodd"/>
+              </svg>
+              <span>Infiltración</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <svg class="w-4 h-4 text-[#f59e0b] shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586 4.707 9.293a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l8-8a1 1 0 000-1.414z" clip-rule="evenodd"/>
+              </svg>
+              <span>Prospección hidrogeológica de aguas subterráneas</span>
+            </li>
+          </ul>
+          <button (click)="onRequestService('service2')"
+                  class="w-full py-3 bg-[#0B3B4E] hover:bg-[#0d4a62] text-white font-semibold rounded-xl transition-colors duration-200 text-sm">
+            Solicitar Cotización
+          </button>
+        </div>
       </div>
+
     </div>
   </div>
-</div>
+</section>
 
-<!-- Sección de Contacto -->
-<div id="contacto" class="w-full py-16 bg-[#f0f8ff] scroll-mt-16">
+<!-- ===== SECCIÓN NOSOTROS ===== -->
+<section id="nosotros" class="w-full py-20 bg-white scroll-mt-[72px]">
   <div class="container mx-auto px-4">
-    <h2 class="text-4xl md:text-5xl font-bold text-center text-[#1e3a8a] mb-12">
-      Contacto
-    </h2>
+
+    <div class="text-center mb-14">
+      <p class="text-[#f59e0b] font-semibold uppercase tracking-widest text-xs md:text-sm mb-2">Quiénes somos</p>
+      <h2 class="text-3xl md:text-5xl font-extrabold text-[#0B3B4E]">Nosotros</h2>
+      <div class="mx-auto mt-4 w-16 h-1 bg-[#f59e0b] rounded-full"></div>
+    </div>
+
+    <!-- Primera fila: imagen izquierda, texto derecha -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center mb-16">
+      <div class="rounded-2xl shadow-lg overflow-hidden h-72 md:h-96 order-1">
+        <img src="/assets/images/hidropozo-perforacion-2.jpg"
+             alt="Equipo de Hidropozo trabajando en campo"
+             loading="lazy"
+             class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+      </div>
+      <div class="order-2 space-y-5">
+        <p class="text-base md:text-lg text-gray-700 leading-relaxed">
+          <strong class="text-[#0B3B4E] font-bold">HIDROPOZO<span class="text-sm align-super ml-0.5">SRL</span></strong>
+          es una empresa con más de 30 años de experiencia en el sector de la ingeniería hidráulica, especializada
+          en la construcción de pozos filtrantes, estudios hidrogeológicos, pruebas de infiltración, aforo de pozos
+          y perforaciones de alta calidad.
+        </p>
+        <p class="text-base md:text-lg text-gray-700 leading-relaxed">
+          Desde nuestra fundación, hemos trabajado para ofrecer soluciones innovadoras y eficientes en la gestión
+          de recursos hídricos, siempre enfocados en la sostenibilidad y la excelencia técnica.
+        </p>
+        <p class="text-base md:text-lg text-gray-700 leading-relaxed">
+          A lo largo de los años, nos hemos consolidado como líderes en la construcción y mantenimiento de sistemas
+          de captación de agua subterránea, adaptándonos a las necesidades de nuestros clientes.
+        </p>
+      </div>
+    </div>
+
+    <!-- Segunda fila: texto izquierda, imagen derecha -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center">
+      <div class="order-2 md:order-1 space-y-5">
+        <p class="text-base md:text-lg text-gray-700 leading-relaxed">
+          Contamos con un equipo altamente capacitado y comprometido con la calidad, la seguridad y el cumplimiento
+          de las normativas vigentes. Nuestra misión es garantizar un servicio eficiente, responsable y con altos
+          estándares de calidad en cada proyecto.
+        </p>
+        <p class="text-base md:text-lg text-gray-700 leading-relaxed">
+          En <strong class="text-[#0B3B4E] font-bold">HIDROPOZO<span class="text-sm align-super ml-0.5">SRL</span></strong>,
+          trabajamos para brindar soluciones integrales en la perforación y manejo de aguas subterráneas, promoviendo
+          la preservación y el uso sostenible de los recursos hídricos, contribuyendo al bienestar de nuestras comunidades.
+        </p>
+      </div>
+      <div class="rounded-2xl shadow-lg overflow-hidden h-72 md:h-96 order-1 md:order-2">
+        <img src="/assets/images/hidropozo-perforacion-1.jpg"
+             alt="Proyecto de perforación Hidropozo"
+             loading="lazy"
+             class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== SECCIÓN CONTACTO ===== -->
+<section id="contacto" class="w-full py-20 bg-slate-50 scroll-mt-[72px]">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-14">
+      <p class="text-[#f59e0b] font-semibold uppercase tracking-widest text-xs md:text-sm mb-2">Estamos para servirle</p>
+      <h2 class="text-3xl md:text-5xl font-extrabold text-[#0B3B4E]">Contáctenos</h2>
+      <div class="mx-auto mt-4 w-16 h-1 bg-[#f59e0b] rounded-full"></div>
+    </div>
     <app-contact-form [details]="selectedDetails"></app-contact-form>
   </div>
-</div>
+</section>
 
 <!-- Footer -->
 <app-footer></app-footer>
