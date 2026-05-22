@@ -57,10 +57,12 @@ export class ContactFormComponent {
           this.form.reset();
           this.isSending = false;
         },
-        () => {
+        (error: any) => {
+          console.error('[EmailJS] Error al enviar:', error);
+          const detail = error?.text || error?.message || (typeof error === 'string' ? error : 'Error desconocido');
           Swal.fire({
             title: 'Error',
-            text: 'Hubo un problema al enviar el mensaje. Por favor, inténtalo de nuevo.',
+            text: `Hubo un problema al enviar el mensaje (${detail}). Por favor, inténtalo de nuevo.`,
             icon: 'error',
             confirmButtonText: 'Aceptar',
             confirmButtonColor: '#dc2626',
