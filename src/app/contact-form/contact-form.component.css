@@ -1,4 +1,11 @@
-/* No custom CSS needed as Tailwind CSS is used */
+.honeypot {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
 
 .highlight-field {
   border-color: #ffcc00 !important;
