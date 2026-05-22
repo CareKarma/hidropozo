@@ -1,36 +1,48 @@
-import { Component, Input } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import emailjs from 'emailjs-com';
+import { Component } from '@angular/core';
+import { ReactiveFormsModule, FormGroup, FormControl, Validators } from '@angular/forms';
+import emailjs from '@emailjs/browser';
 import Swal from 'sweetalert2';
 import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-contact-form',
   standalone: true,
-  imports: [FormsModule],
+  imports: [ReactiveFormsModule],
   templateUrl: './contact-form.component.html',
   styleUrls: ['./contact-form.component.css']
 })
 export class ContactFormComponent {
-  @Input() set details(value: string) {
-    this.detailsValue = value ?? '';
-  }
-
-  detailsValue = '';
   isSending = false;
 
-  sendEmail(e: Event) {
-    e.preventDefault();
-    if (this.isSending) return;
+  form = new FormGroup({
+    name:    new FormControl('', [Validators.required, Validators.minLength(2)]),
+    email:   new FormControl('', [Validators.required, Validators.email]),
+    details: new FormControl('', [Validators.required, Validators.minLength(10)]),
+    website: new FormControl(''), // honeypot — bots lo rellenan, humanos no
+  });
 
-    const form = e.target as HTMLFormElement;
+  get name()    { return this.form.get('name')!; }
+  get email()   { return this.form.get('email')!; }
+  get details() { return this.form.get('details')!; }
+
+  sendEmail() {
+    if (this.form.get('website')?.value) return; // honeypot activado
+
+    if (this.form.invalid) {
+      this.form.markAllAsTouched();
+      return;
+    }
+
+    if (this.isSending) return;
     this.isSending = true;
 
+    const { name, email, details } = this.form.value;
+
     emailjs
-      .sendForm(
+      .send(
         environment.emailjs.serviceId,
         environment.emailjs.templateId,
-        form,
+        { name, email, details },
         environment.emailjs.publicKey
       )
       .then(
@@ -42,8 +54,7 @@ export class ContactFormComponent {
             confirmButtonText: 'Aceptar',
             confirmButtonColor: '#1d4ed8',
           });
-          form.reset();
-          this.detailsValue = '';
+          this.form.reset();
           this.isSending = false;
         },
         () => {

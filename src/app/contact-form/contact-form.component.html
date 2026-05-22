@@ -3,31 +3,54 @@
   <!-- Franja superior decorativa con colores de la marca -->
   <div class="h-2 bg-gradient-to-r from-[#0B3B4E] via-[#1a5e78] to-[#f59e0b]"></div>
 
-  <form (submit)="sendEmail($event)" class="p-8 md:p-10 space-y-6">
+  <form [formGroup]="form" (ngSubmit)="sendEmail()" class="p-8 md:p-10 space-y-6" novalidate>
+
+    <!-- Honeypot: oculto para humanos, visible para bots -->
+    <div class="honeypot" aria-hidden="true" tabindex="-1">
+      <label for="website">No rellenar</label>
+      <input type="text" id="website" name="website" formControlName="website" autocomplete="off" tabindex="-1">
+    </div>
 
     <!-- Nombre -->
     <div class="space-y-1.5">
       <label for="name" class="block text-sm font-semibold text-gray-700 uppercase tracking-wide">Nombre</label>
-      <input type="text" id="name" name="name" required
+      <input type="text" id="name" formControlName="name"
              placeholder="Su nombre completo"
+             [class.border-red-400]="name.invalid && name.touched"
              class="w-full px-4 py-3 border border-gray-200 rounded-xl text-gray-800 placeholder-gray-400 focus:outline-none focus:border-[#0B3B4E] focus:ring-2 focus:ring-[#0B3B4E]/20 transition duration-200 text-sm">
+      @if (name.touched && name.hasError('required')) {
+        <p class="text-xs text-red-500 mt-1">El nombre es obligatorio.</p>
+      } @else if (name.touched && name.hasError('minlength')) {
+        <p class="text-xs text-red-500 mt-1">El nombre debe tener al menos 2 caracteres.</p>
+      }
     </div>
 
     <!-- Email -->
     <div class="space-y-1.5">
       <label for="email" class="block text-sm font-semibold text-gray-700 uppercase tracking-wide">Email</label>
-      <input type="email" id="email" name="email" required
+      <input type="email" id="email" formControlName="email"
              placeholder="ejemplo@correo.com"
+             [class.border-red-400]="email.invalid && email.touched"
              class="w-full px-4 py-3 border border-gray-200 rounded-xl text-gray-800 placeholder-gray-400 focus:outline-none focus:border-[#0B3B4E] focus:ring-2 focus:ring-[#0B3B4E]/20 transition duration-200 text-sm">
+      @if (email.touched && email.hasError('required')) {
+        <p class="text-xs text-red-500 mt-1">El email es obligatorio.</p>
+      } @else if (email.touched && email.hasError('email')) {
+        <p class="text-xs text-red-500 mt-1">Ingrese un email válido.</p>
+      }
     </div>
 
     <!-- Mensaje / Detalles -->
     <div class="space-y-1.5">
-      <label for="message" class="block text-sm font-semibold text-gray-700 uppercase tracking-wide">Mensaje</label>
-      <textarea id="message" name="details" required rows="5"
-                [(ngModel)]="detailsValue"
+      <label for="details" class="block text-sm font-semibold text-gray-700 uppercase tracking-wide">Mensaje</label>
+      <textarea id="details" formControlName="details" rows="5"
                 placeholder="Cuéntenos en qué podemos ayudarle..."
+                [class.border-red-400]="details.invalid && details.touched"
                 class="w-full px-4 py-3 border border-gray-200 rounded-xl text-gray-800 placeholder-gray-400 focus:outline-none focus:border-[#0B3B4E] focus:ring-2 focus:ring-[#0B3B4E]/20 transition duration-200 text-sm resize-none"></textarea>
+      @if (details.touched && details.hasError('required')) {
+        <p class="text-xs text-red-500 mt-1">El mensaje es obligatorio.</p>
+      } @else if (details.touched && details.hasError('minlength')) {
+        <p class="text-xs text-red-500 mt-1">El mensaje debe tener al menos 10 caracteres.</p>
+      }
     </div>
 
     <!-- Botón enviar -->
