@@ -3,12 +3,12 @@
   <!-- Franja superior decorativa con colores de la marca -->
   <div class="h-2 bg-gradient-to-r from-[#0B3B4E] via-[#1a5e78] to-[#f59e0b]"></div>
 
-  <form #contactForm [formGroup]="form" (ngSubmit)="sendEmail()" class="p-8 md:p-10 space-y-6" novalidate>
+  <form [formGroup]="form" (ngSubmit)="sendEmail()" class="p-8 md:p-10 space-y-6" novalidate>
 
     <!-- Honeypot: oculto para humanos, visible para bots -->
     <div class="honeypot" aria-hidden="true" tabindex="-1">
-      <label for="website">No rellenar</label>
-      <input type="text" id="website" name="website" formControlName="website" autocomplete="off" tabindex="-1">
+      <label for="_hp">No rellenar</label>
+      <input type="text" id="_hp" name="_hp" formControlName="_hp" autocomplete="new-password" tabindex="-1">
     </div>
 
     <!-- Nombre -->
@@ -55,7 +55,7 @@
 
     <!-- Botón enviar -->
     <div class="text-center pt-2">
-      <button type="submit" [disabled]="isSending"
+      <button type="button" (click)="sendEmail()" [disabled]="isSending"
               class="px-10 py-3.5 bg-[#0B3B4E] text-white font-bold rounded-xl hover:bg-[#0d4a62] focus:outline-none focus:ring-2 focus:ring-[#0B3B4E] focus:ring-offset-2 transition-all duration-200 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:scale-100 text-sm tracking-wide">
         {{ isSending ? 'Enviando...' : 'Enviar Mensaje' }}
       </button>
