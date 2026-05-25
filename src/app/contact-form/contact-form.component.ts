@@ -1,6 +1,5 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Component } from '@angular/core';
 import { ReactiveFormsModule, FormGroup, FormControl, Validators } from '@angular/forms';
-import emailjs from '@emailjs/browser';
 import Swal from 'sweetalert2';
 import { environment } from '../../environments/environment';
 
@@ -12,8 +11,6 @@ import { environment } from '../../environments/environment';
   styleUrls: ['./contact-form.component.css']
 })
 export class ContactFormComponent {
-  @ViewChild('contactForm') contactFormEl!: ElementRef<HTMLFormElement>;
-
   isSending = false;
 
   form = new FormGroup({
@@ -27,7 +24,7 @@ export class ContactFormComponent {
   get email()   { return this.form.get('email')!; }
   get details() { return this.form.get('details')!; }
 
-  sendEmail() {
+  async sendEmail() {
     if (this.form.get('website')?.value) return; // honeypot activado
 
     if (this.form.invalid) {
@@ -38,37 +35,44 @@ export class ContactFormComponent {
     if (this.isSending) return;
     this.isSending = true;
 
-    emailjs
-      .sendForm(
-        environment.emailjs.serviceId,
-        environment.emailjs.templateId,
-        this.contactFormEl.nativeElement,
-        environment.emailjs.publicKey
-      )
-      .then(
-        () => {
-          Swal.fire({
-            title: '¡Mensaje enviado!',
-            text: 'Gracias por contactarnos. Nos pondremos en contacto contigo pronto.',
-            icon: 'success',
-            confirmButtonText: 'Aceptar',
-            confirmButtonColor: '#1d4ed8',
-          });
-          this.form.reset();
-          this.isSending = false;
-        },
-        (error: any) => {
-          console.error('[EmailJS] Error al enviar:', error);
-          const detail = error?.text || error?.message || (typeof error === 'string' ? error : 'Error desconocido');
-          Swal.fire({
-            title: 'Error',
-            text: `Hubo un problema al enviar el mensaje (${detail}). Por favor, inténtalo de nuevo.`,
-            icon: 'error',
-            confirmButtonText: 'Aceptar',
-            confirmButtonColor: '#dc2626',
-          });
-          this.isSending = false;
-        }
-      );
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          access_key: environment.web3forms.accessKey,
+          name:    this.form.get('name')!.value,
+          email:   this.form.get('email')!.value,
+          message: this.form.get('details')!.value,
+          subject: this.form.get('name')!.value + '- Solicitud de  cotización',
+        })
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        Swal.fire({
+          title: '¡Mensaje enviado!',
+          text: 'Gracias por contactarnos. Nos pondremos en contacto contigo pronto.',
+          icon: 'success',
+          confirmButtonText: 'Aceptar',
+          confirmButtonColor: '#1d4ed8',
+        });
+        this.form.reset();
+      } else {
+        throw new Error(data.message || 'Error desconocido');
+      }
+    } catch (error: any) {
+      console.error('[Web3Forms] Error al enviar:', error);
+      Swal.fire({
+        title: 'Error',
+        text: `Hubo un problema al enviar el mensaje (${error?.message || 'Error desconocido'}). Por favor, inténtalo de nuevo.`,
+        icon: 'error',
+        confirmButtonText: 'Aceptar',
+        confirmButtonColor: '#dc2626',
+      });
+    } finally {
+      this.isSending = false;
+    }
   }
 }

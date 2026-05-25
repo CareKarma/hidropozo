@@ -3,7 +3,7 @@
   <!-- Franja superior decorativa con colores de la marca -->
   <div class="h-2 bg-gradient-to-r from-[#0B3B4E] via-[#1a5e78] to-[#f59e0b]"></div>
 
-  <form #contactForm [formGroup]="form" (ngSubmit)="sendEmail()" class="p-8 md:p-10 space-y-6" novalidate>
+  <form [formGroup]="form" (ngSubmit)="sendEmail()" class="p-8 md:p-10 space-y-6" novalidate>
 
     <!-- Honeypot: oculto para humanos, visible para bots -->
     <div class="honeypot" aria-hidden="true" tabindex="-1">
