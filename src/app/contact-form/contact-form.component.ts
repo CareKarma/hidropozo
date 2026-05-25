@@ -58,10 +58,11 @@ export class ContactFormComponent {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           access_key: environment.web3forms.accessKey,
+          from_name: nameVal,
           name:    nameVal,
           email:   emailVal,
           message: detailsVal,
-          subject: nameVal + ' - Solicitud de cotización',
+          subject: 'Solicitud de servicio',
         })
       });
 
