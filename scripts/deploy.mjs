@@ -25,7 +25,10 @@ try {
 
   // 1) No permitir desplegar con cambios de código sin commitear
   //    (se ignoran dist/ y .claude/, que no son parte del código fuente).
-  const dirty = cap('git status --porcelain')
+  //    OJO: no usar cap() aquí — su .trim() quita el espacio inicial de la
+  //    primera línea del porcelain y desalinea el slice(3).
+  const status = execSync('git status --porcelain', { encoding: 'utf8' });
+  const dirty = status
     .split('\n')
     .filter(Boolean)
     .filter((line) => {
