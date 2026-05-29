@@ -55,7 +55,7 @@
 
     <!-- Botón enviar -->
     <div class="text-center pt-2">
-      <button type="button" (click)="sendEmail()" [disabled]="isSending"
+      <button type="submit" [disabled]="isSending"
               class="px-10 py-3.5 bg-[#0B3B4E] text-white font-bold rounded-xl hover:bg-[#0d4a62] focus:outline-none focus:ring-2 focus:ring-[#0B3B4E] focus:ring-offset-2 transition-all duration-200 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:scale-100 text-sm tracking-wide">
         {{ isSending ? 'Enviando...' : 'Enviar Mensaje' }}
       </button>

@@ -1,0 +1,5 @@
+/* El componente no necesita estilos propios por ahora;
+   todo el layout se resuelve con Tailwind en la plantilla. */
+:host {
+  display: block;
+}

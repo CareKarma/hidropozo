@@ -21,6 +21,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Fuente de display para títulos — moderna y limpia (Plus Jakarta Sans).
+   El cuerpo del texto sigue usando Inter. */
+h1, h2, h3, h4,
+.font-display {
+  font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+  letter-spacing: -0.02em;
+}
+
 /* ===== ANIMACIONES DEL HERO ===== */
 @keyframes heroSlideDown {
   from { opacity: 0; transform: translateY(-28px); }
