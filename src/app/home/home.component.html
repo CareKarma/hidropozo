@@ -10,11 +10,11 @@
   <div id="hero-carousel" class="relative w-full h-full" data-carousel="slide">
     <div class="relative h-full overflow-hidden">
 
-      <!-- Slide 1: activo por defecto (data-carousel-item="active" + sin clase hidden) -->
+      <!-- Slide 1: activo por defecto — imagen horizontal (encaja bien en hero ancho) -->
       <div class="duration-1000 ease-in-out" data-carousel-item="active">
-        <img src="assets/images/hidropozo-perforacion-1.jpg"
-             class="absolute w-full h-full object-cover object-[center_65%]"
-             alt="Técnico Hidropozo supervisando perforación"
+        <img src="assets/images/hidropozo-perforacion-4.jpg"
+             class="absolute w-full h-full object-cover object-center"
+             alt="Equipo de perforación Hidropozo en campo"
              fetchpriority="high">
       </div>
 
@@ -31,23 +31,15 @@
         <img src="assets/images/hidropozo-perforacion-3.jpg"
              loading="lazy"
              class="absolute w-full h-full object-cover object-center"
-             alt="Equipo de perforación Hidropozo en obra">
+             alt="Perforadora Hidropozo en obra">
       </div>
 
-      <!-- Slide 4 -->
+      <!-- Slide 4: sustituye a las verticales que se recortaban -->
       <div class="hidden duration-1000 ease-in-out" data-carousel-item>
-        <img src="assets/images/hidropozo-perforacion-4.jpg"
+        <img src="assets/images/hidropozo-obra-3.jpg"
              loading="lazy"
              class="absolute w-full h-full object-cover object-center"
-             alt="Perforadora Hidropozo con operarios en campo">
-      </div>
-
-      <!-- Slide 5 -->
-      <div class="hidden duration-1000 ease-in-out" data-carousel-item>
-        <img src="assets/images/hidropozo-perforacion-5.jpg"
-             loading="lazy"
-             class="absolute w-full h-full object-cover object-center"
-             alt="Perforación de pozo profundo Hidropozo">
+             alt="Proyecto de perforación Hidropozo en campo">
       </div>
 
     </div>
@@ -58,7 +50,6 @@
       <button type="button" class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all duration-300" aria-label="Slide 2" data-carousel-slide-to="1"></button>
       <button type="button" class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all duration-300" aria-label="Slide 3" data-carousel-slide-to="2"></button>
       <button type="button" class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all duration-300" aria-label="Slide 4" data-carousel-slide-to="3"></button>
-      <button type="button" class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all duration-300" aria-label="Slide 5" data-carousel-slide-to="4"></button>
     </div>
 
     <!-- Botón: anterior — z-[40] para estar sobre el texto del hero -->
