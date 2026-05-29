@@ -22,7 +22,8 @@ export class HomeComponent implements AfterViewInit {
   }
 
   onRequestService(_serviceKey: string) {
-    document.querySelector('#contacto')?.scrollIntoView({ behavior: 'smooth' });
+    // Baja directo al formulario (no al mapa, que va primero en la sección)
+    document.querySelector('#form-contacto')?.scrollIntoView({ behavior: 'smooth' });
   }
 
   scrollToSection(sectionId: string) {
