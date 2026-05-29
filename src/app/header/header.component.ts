@@ -26,7 +26,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
       { threshold: 0.3 }
     );
 
-    ['inicio', 'servicios', 'nosotros', 'contacto'].forEach(id => {
+    ['inicio', 'servicios', 'proyectos', 'nosotros', 'contacto'].forEach(id => {
       const el = document.getElementById(id);
       if (el) this.observer.observe(el);
     });

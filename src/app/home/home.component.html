@@ -4,7 +4,7 @@
 </div>
 
 <!-- ===== SECCIÓN INICIO / HERO ===== -->
-<section id="inicio" class="relative w-full h-[65vh] md:h-[80vh] lg:h-screen overflow-hidden scroll-mt-[72px]">
+<section id="inicio" class="relative w-full h-[65vh] md:h-[75vh] lg:h-[80vh] lg:max-h-[760px] overflow-hidden scroll-mt-[72px]">
 
   <!-- Carousel Flowbite -->
   <div id="hero-carousel" class="relative w-full h-full" data-carousel="slide">
@@ -117,19 +117,19 @@
   <div class="container mx-auto px-4">
     <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-white">
       <div>
-        <p class="text-3xl md:text-4xl font-extrabold text-[#f59e0b]">+30</p>
+        <p class="font-display text-3xl md:text-4xl font-extrabold text-[#f59e0b]" [appCountUp]="30" prefix="+">+30</p>
         <p class="text-xs md:text-sm mt-1 text-slate-300 uppercase tracking-wide">Años de experiencia</p>
       </div>
       <div>
-        <p class="text-3xl md:text-4xl font-extrabold text-[#f59e0b]">500+</p>
+        <p class="font-display text-3xl md:text-4xl font-extrabold text-[#f59e0b]" [appCountUp]="500" suffix="+">500+</p>
         <p class="text-xs md:text-sm mt-1 text-slate-300 uppercase tracking-wide">Pozos perforados</p>
       </div>
       <div>
-        <p class="text-3xl md:text-4xl font-extrabold text-[#f59e0b]">100%</p>
+        <p class="font-display text-3xl md:text-4xl font-extrabold text-[#f59e0b]" [appCountUp]="100" suffix="%">100%</p>
         <p class="text-xs md:text-sm mt-1 text-slate-300 uppercase tracking-wide">Compromiso</p>
       </div>
       <div>
-        <p class="text-3xl md:text-4xl font-extrabold text-[#f59e0b]">24/7</p>
+        <p class="font-display text-3xl md:text-4xl font-extrabold text-[#f59e0b]">24/7</p>
         <p class="text-xs md:text-sm mt-1 text-slate-300 uppercase tracking-wide">Soporte técnico</p>
       </div>
     </div>
@@ -158,7 +158,7 @@
                fill
                class="object-cover object-center hover:scale-105 transition-transform duration-500">
           <div class="absolute inset-0 bg-gradient-to-t from-black/65 to-transparent"></div>
-          <span class="absolute bottom-4 left-4 text-white font-extrabold text-xl tracking-wide drop-shadow">Perforaciones</span>
+          <span class="font-display absolute bottom-4 left-4 text-white font-extrabold text-xl tracking-wide drop-shadow">Perforaciones</span>
         </div>
         <!-- Contenido -->
         <div class="p-6 flex flex-col flex-1">
@@ -192,12 +192,12 @@
       <!-- Servicio 2: Estudios -->
       <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col">
         <div class="relative h-56 overflow-hidden">
-          <img ngSrc="assets/pexels-rezwan-1216589.jpg"
+          <img ngSrc="assets/images/pexels-rezwan-1216589.jpg"
                alt="Estudios hidrogeológicos"
                fill
                class="object-cover object-center hover:scale-105 transition-transform duration-500">
           <div class="absolute inset-0 bg-gradient-to-t from-black/65 to-transparent"></div>
-          <span class="absolute bottom-4 left-4 text-white font-extrabold text-xl tracking-wide drop-shadow">Estudios</span>
+          <span class="font-display absolute bottom-4 left-4 text-white font-extrabold text-xl tracking-wide drop-shadow">Estudios</span>
         </div>
         <div class="p-6 flex flex-col flex-1">
           <ul class="space-y-3 mb-6 flex-1 text-gray-600">
@@ -231,8 +231,85 @@
   </div>
 </section>
 
+<!-- ===== SECCIÓN CÓMO TRABAJAMOS (PROCESO) ===== -->
+<section id="proceso" class="w-full py-20 bg-[#0B3B4E] scroll-mt-[72px]">
+  <div class="container mx-auto px-4">
+
+    <div class="text-center mb-14">
+      <p class="text-[#f59e0b] font-semibold uppercase tracking-widest text-xs md:text-sm mb-2">Nuestro proceso</p>
+      <h2 class="text-3xl md:text-5xl font-extrabold text-white">Cómo trabajamos</h2>
+      <div class="mx-auto mt-4 w-16 h-1 bg-[#f59e0b] rounded-full"></div>
+      <p class="max-w-2xl mx-auto mt-5 text-slate-300 text-base md:text-lg leading-relaxed">
+        Un proceso ordenado y transparente, de principio a fin, para garantizar resultados confiables.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+
+      <!-- Paso 1 -->
+      <div class="relative text-center px-4">
+        <div class="relative inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-white/5 border border-white/10 mb-5">
+          <i class="fas fa-magnifying-glass-chart text-3xl text-[#f59e0b]"></i>
+          <span class="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-[#f59e0b] text-[#0B3B4E] font-extrabold text-sm flex items-center justify-center">1</span>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2">Estudio</h3>
+        <p class="text-sm text-slate-300 leading-relaxed">Estudio hidrogeológico y prospección del terreno para ubicar la mejor fuente de agua.</p>
+      </div>
+
+      <!-- Paso 2 -->
+      <div class="relative text-center px-4">
+        <div class="relative inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-white/5 border border-white/10 mb-5">
+          <i class="fas fa-helmet-safety text-3xl text-[#f59e0b]"></i>
+          <span class="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-[#f59e0b] text-[#0B3B4E] font-extrabold text-sm flex items-center justify-center">2</span>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2">Perforación</h3>
+        <p class="text-sm text-slate-300 leading-relaxed">Perforación del pozo con equipos especializados y personal técnico capacitado.</p>
+      </div>
+
+      <!-- Paso 3 -->
+      <div class="relative text-center px-4">
+        <div class="relative inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-white/5 border border-white/10 mb-5">
+          <i class="fas fa-gears text-3xl text-[#f59e0b]"></i>
+          <span class="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-[#f59e0b] text-[#0B3B4E] font-extrabold text-sm flex items-center justify-center">3</span>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2">Instalación</h3>
+        <p class="text-sm text-slate-300 leading-relaxed">Instalación del sistema de bombeo y pruebas de aforo para asegurar el rendimiento.</p>
+      </div>
+
+      <!-- Paso 4 -->
+      <div class="relative text-center px-4">
+        <div class="relative inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-white/5 border border-white/10 mb-5">
+          <i class="fas fa-wrench text-3xl text-[#f59e0b]"></i>
+          <span class="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-[#f59e0b] text-[#0B3B4E] font-extrabold text-sm flex items-center justify-center">4</span>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2">Mantenimiento</h3>
+        <p class="text-sm text-slate-300 leading-relaxed">Mantenimiento preventivo y soporte continuo para prolongar la vida útil del pozo.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECCIÓN PROYECTOS ===== -->
+<section id="proyectos" class="w-full py-20 bg-white scroll-mt-[72px]">
+  <div class="container mx-auto px-4">
+
+    <div class="text-center mb-14">
+      <p class="text-[#f59e0b] font-semibold uppercase tracking-widest text-xs md:text-sm mb-2">Nuestro trabajo</p>
+      <h2 class="text-3xl md:text-5xl font-extrabold text-[#0B3B4E]">Proyectos</h2>
+      <div class="mx-auto mt-4 w-16 h-1 bg-[#f59e0b] rounded-full"></div>
+      <p class="max-w-2xl mx-auto mt-5 text-gray-600 text-base md:text-lg leading-relaxed">
+        Una muestra de pozos perforados y trabajos en campo que respaldan nuestra experiencia.
+      </p>
+    </div>
+
+    <app-project-gallery></app-project-gallery>
+
+  </div>
+</section>
+
 <!-- ===== SECCIÓN NOSOTROS ===== -->
-<section id="nosotros" class="w-full py-20 bg-white scroll-mt-[72px]">
+<section id="nosotros" class="w-full py-20 bg-slate-50 scroll-mt-[72px]">
   <div class="container mx-auto px-4">
 
     <div class="text-center mb-14">
@@ -292,6 +369,21 @@
   </div>
 </section>
 
+<!-- ===== SECCIÓN TESTIMONIOS ===== -->
+<section id="testimonios" class="w-full py-20 bg-white scroll-mt-[72px]">
+  <div class="container mx-auto px-4">
+
+    <div class="text-center mb-14">
+      <p class="text-[#f59e0b] font-semibold uppercase tracking-widest text-xs md:text-sm mb-2">Lo que dicen nuestros clientes</p>
+      <h2 class="text-3xl md:text-5xl font-extrabold text-[#0B3B4E]">Reseñas</h2>
+      <div class="mx-auto mt-4 w-16 h-1 bg-[#f59e0b] rounded-full"></div>
+    </div>
+
+    <app-testimonials></app-testimonials>
+
+  </div>
+</section>
+
 <!-- ===== SECCIÓN CONTACTO ===== -->
 <section id="contacto" class="w-full py-20 bg-slate-50 scroll-mt-[72px]">
   <div class="container mx-auto px-4">
@@ -311,7 +403,7 @@
         <div class="rounded-2xl overflow-hidden shadow-md">
           <iframe
             title="Ubicación Hidropozo SRL"
-            src="https://maps.google.com/maps?q=Calle+Santos+Vilorio+17,+Colonia+de+los+Doctores,+Santo+Domingo,+Republica+Dominicana&output=embed&z=15"
+            src="https://maps.google.com/maps?q=18.535379,-69.919034&z=16&output=embed"
             width="100%"
             height="280"
             style="border:0;"
@@ -340,7 +432,7 @@
           </ul>
           <div class="pt-2 border-t border-gray-100 flex items-center gap-2 text-sm text-gray-500">
             <i class="fas fa-phone-alt text-[#f59e0b] text-xs"></i>
-            <span>Emergencias 24/7: <a href="tel:8293593011" class="font-semibold text-[#0B3B4E] hover:underline">829-359-3011</a></span>
+            <span>Emergencias 24/7: <a href="tel:+18093593011" class="font-semibold text-[#0B3B4E] hover:underline">809-359-3011</a></span>
           </div>
         </div>
 
@@ -357,3 +449,6 @@
 
 <!-- Footer -->
 <app-footer></app-footer>
+
+<!-- Botón flotante de WhatsApp (fijo en toda la página) -->
+<app-whatsapp-fab></app-whatsapp-fab>
