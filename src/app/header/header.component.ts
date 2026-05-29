@@ -46,7 +46,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });
 
-      if (highlightFields && sectionId === '#contacto') {
+      if (highlightFields && sectionId === '#form-contacto') {
         setTimeout(() => {
           const nameField = document.querySelector('#name') as HTMLElement;
           const emailField = document.querySelector('#email') as HTMLElement;
