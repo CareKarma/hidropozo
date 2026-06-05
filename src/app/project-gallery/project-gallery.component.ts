@@ -21,10 +21,12 @@ export class ProjectGalleryComponent {
     { type: 'image', src: 'assets/images/hidropozo-perforacion-3.jpg', title: 'Equipo de perforación en obra' },
     { type: 'video', src: 'assets/images/hidropozo-proyecto-2.mp4', title: 'Perforación en proceso' },
     { type: 'image', src: 'assets/images/hidropozo-perforacion-1.jpg', title: 'Supervisión de perforación' },
-    { type: 'video', src: 'assets/images/hidropozo-proyecto-4.mp4', title: 'Prueba de infiltración' },
+    { type: 'video', src: 'assets/images/hidropozo-proyecto-5.mp4', title: 'Perforación en campo' },
     { type: 'image', src: 'assets/images/hidropozo-perforacion-5.jpg', title: 'Perforación de pozo profundo' },
-    { type: 'video', src: 'assets/images/hidropozo-proyecto-3.mp4', title: 'Pozo en operación' },
+    { type: 'video', src: 'assets/images/hidropozo-proyecto-4.mp4', title: 'Prueba de infiltración' },
     { type: 'image', src: 'assets/images/hidropozo-obra-1.jpg', title: 'Trabajo de campo' },
+    { type: 'video', src: 'assets/images/hidropozo-proyecto-3.mp4', title: 'Pozo en operación' },
+    { type: 'video', src: 'assets/images/hidropozo-proyecto-6.mp4', title: 'Pozo terminado' },
   ];
 
   @ViewChildren('videoEl') videoEls!: QueryList<ElementRef<HTMLVideoElement>>;
