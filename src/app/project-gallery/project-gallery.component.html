@@ -8,7 +8,7 @@
     </h3>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      @for (item of group.items; track item.src) {
+      @for (item of visibleItems(group); track item.src) {
         <div class="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 h-64 bg-[#0B3B4E]">
 
           @if (item.type === 'image') {
@@ -37,6 +37,16 @@
         </div>
       }
     </div>
+
+    @if (group.items.length > limit) {
+      <div class="text-center mt-8">
+        <button type="button" (click)="group.expanded = !group.expanded"
+                class="inline-flex items-center gap-2 px-6 py-2.5 rounded-lg border-2 border-[#0B3B4E] text-[#0B3B4E] font-semibold hover:bg-[#0B3B4E] hover:text-white transition-colors duration-300">
+          {{ group.expanded ? 'Ver menos' : 'Ver más' }}
+          <i class="fas fa-chevron-down transition-transform duration-300" [class.rotate-180]="group.expanded"></i>
+        </button>
+      </div>
+    }
 
   </div>
 }

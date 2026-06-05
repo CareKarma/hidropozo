@@ -11,6 +11,7 @@ interface GalleryItem {
 interface GalleryGroup {
   heading: string;     // título del apartado
   items: GalleryItem[];
+  expanded?: boolean;  // si el apartado muestra todas sus tarjetas
 }
 
 @Component({
@@ -46,7 +47,15 @@ export class ProjectGalleryComponent {
     },
   ];
 
+  // Máximo de tarjetas visibles por apartado antes de mostrar "Ver más".
+  readonly limit = 6;
+
   @ViewChildren('videoEl') videoEls!: QueryList<ElementRef<HTMLVideoElement>>;
+
+  // Tarjetas visibles de un apartado según su estado (colapsado/expandido).
+  visibleItems(group: GalleryGroup): GalleryItem[] {
+    return group.expanded ? group.items : group.items.slice(0, this.limit);
+  }
 
   playVideo(item: GalleryItem, video: HTMLVideoElement) {
     item.playing = true;
