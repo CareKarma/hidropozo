@@ -1,4 +1,5 @@
 @for (group of groups; track group.heading) {
+  @if (group.items.length > 0) {
   <div class="max-w-6xl mx-auto mb-14 last:mb-0">
 
     <!-- Título del apartado -->
@@ -49,4 +50,5 @@
     }
 
   </div>
+  }
 }

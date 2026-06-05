@@ -26,6 +26,14 @@ export class ProjectGalleryComponent {
   // Para agregar más apartados o items, edita este arreglo.
   groups: GalleryGroup[] = [
     {
+      heading: 'Estudios de prospección hidrogeológica',
+      items: [
+        // Aún sin contenido. Agrega aquí objetos { type, src, title } y este
+        // apartado aparecerá automáticamente en el sitio.
+        // Ej: { type: 'image', src: 'assets/images/archivo.jpg', title: 'Prospección' },
+      ],
+    },
+    {
       heading: 'Perforación de pozos',
       items: [
         { type: 'video', src: 'assets/images/hidropozo-proyecto-1.mp4', title: 'Pozo en producción' },
