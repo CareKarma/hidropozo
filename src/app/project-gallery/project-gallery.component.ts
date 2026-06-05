@@ -8,6 +8,11 @@ interface GalleryItem {
   playing?: boolean; // solo para videos
 }
 
+interface GalleryGroup {
+  heading: string;     // título del apartado
+  items: GalleryItem[];
+}
+
 @Component({
   selector: 'app-project-gallery',
   standalone: true,
@@ -16,17 +21,29 @@ interface GalleryItem {
   styleUrls: ['./project-gallery.component.css']
 })
 export class ProjectGalleryComponent {
-  items: GalleryItem[] = [
-    { type: 'video', src: 'assets/images/hidropozo-proyecto-1.mp4', title: 'Pozo en producción' },
-    { type: 'image', src: 'assets/images/hidropozo-perforacion-3.jpg', title: 'Equipo de perforación en obra' },
-    { type: 'video', src: 'assets/images/hidropozo-proyecto-2.mp4', title: 'Perforación en proceso' },
-    { type: 'image', src: 'assets/images/hidropozo-perforacion-1.jpg', title: 'Supervisión de perforación' },
-    { type: 'video', src: 'assets/images/hidropozo-proyecto-5.mp4', title: 'Perforación en campo' },
-    { type: 'image', src: 'assets/images/hidropozo-perforacion-5.jpg', title: 'Perforación de pozo profundo' },
-    { type: 'video', src: 'assets/images/hidropozo-proyecto-4.mp4', title: 'Prueba de infiltración' },
-    { type: 'image', src: 'assets/images/hidropozo-obra-1.jpg', title: 'Trabajo de campo' },
-    { type: 'video', src: 'assets/images/hidropozo-proyecto-3.mp4', title: 'Pozo en operación' },
-    { type: 'video', src: 'assets/images/hidropozo-proyecto-6.mp4', title: 'Pozo terminado' },
+  // Galería agrupada por apartados (categorías de trabajo).
+  // Para agregar más apartados o items, edita este arreglo.
+  groups: GalleryGroup[] = [
+    {
+      heading: 'Perforación de pozos',
+      items: [
+        { type: 'video', src: 'assets/images/hidropozo-proyecto-1.mp4', title: 'Pozo en producción' },
+        { type: 'image', src: 'assets/images/hidropozo-perforacion-3.jpg', title: 'Equipo de perforación en obra' },
+        { type: 'video', src: 'assets/images/hidropozo-proyecto-2.mp4', title: 'Perforación en proceso' },
+        { type: 'image', src: 'assets/images/hidropozo-perforacion-1.jpg', title: 'Supervisión de perforación' },
+        { type: 'image', src: 'assets/images/hidropozo-perforacion-5.jpg', title: 'Perforación de pozo profundo' },
+        { type: 'video', src: 'assets/images/hidropozo-proyecto-3.mp4', title: 'Pozo en operación' },
+        { type: 'image', src: 'assets/images/hidropozo-obra-1.jpg', title: 'Trabajo de campo' },
+      ],
+    },
+    {
+      heading: 'Pruebas de infiltración',
+      items: [
+        { type: 'video', src: 'assets/images/hidropozo-proyecto-4.mp4', title: 'Prueba de infiltración' },
+        { type: 'video', src: 'assets/images/hidropozo-proyecto-5.mp4', title: 'Prueba de infiltración' },
+        { type: 'video', src: 'assets/images/hidropozo-proyecto-6.mp4', title: 'Prueba de infiltración' },
+      ],
+    },
   ];
 
   @ViewChildren('videoEl') videoEls!: QueryList<ElementRef<HTMLVideoElement>>;
