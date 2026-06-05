@@ -48,7 +48,7 @@ export class ProjectGalleryComponent {
   ];
 
   // Máximo de tarjetas visibles por apartado antes de mostrar "Ver más".
-  readonly limit = 6;
+  readonly limit = 1;
 
   @ViewChildren('videoEl') videoEls!: QueryList<ElementRef<HTMLVideoElement>>;
 
