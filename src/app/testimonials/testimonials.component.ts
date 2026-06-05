@@ -17,25 +17,12 @@ interface Testimonial {
 })
 export class TestimonialsComponent {
   // Cada item: cita textual, nombre del cliente, zona y nº de estrellas.
-  // ⚠️ La 1ra (Gabriel Félix) la indicó el cliente; las 2 siguientes son
-  //    FICTICIAS (nombres/zonas plausibles) — reemplazar por reseñas reales.
+  // Para agregar más reseñas reales, añade objetos a este arreglo.
   testimonials: Testimonial[] = [
     {
       quote: 'Perforaron el pozo de mi finca y quedé muy satisfecho. Cumplieron con el tiempo que acordamos y el agua salió de buena calidad. Gente seria y trabajadora.',
       name: 'Gabriel Félix',
       role: 'San Juan',
-      stars: 5,
-    },
-    {
-      quote: 'Contratamos a Hidropozo para un proyecto y cumplieron con todo lo acordado. Personal serio y bien equipado, nos explicaron cada paso. Quedamos muy satisfechos.',
-      name: 'Ramón Peña',
-      role: 'Santiago',
-      stars: 5,
-    },
-    {
-      quote: 'Le dan mantenimiento a nuestro pozo desde hace tiempo y siempre responden rápido, hasta en emergencias. Trato amable y precios justos. Los recomiendo.',
-      name: 'Carmen Rodríguez',
-      role: 'Baní',
       stars: 5,
     },
   ];
