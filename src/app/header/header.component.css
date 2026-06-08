@@ -3,8 +3,19 @@
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #0B3B4E;
   z-index: 9999;
+  /* Estado en el tope (sobre el hero): semi-transparente con desenfoque */
+  background-color: rgba(11, 59, 78, 0.55);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  transition: background-color 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+/* Al hacer scroll: sólido y con sombra (look corporativo) */
+.header.scrolled {
+  background-color: #0B3B4E;
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.25);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }

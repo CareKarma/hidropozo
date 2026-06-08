@@ -7,12 +7,13 @@ import { WhatsappFabComponent } from '../whatsapp-fab/whatsapp-fab.component';
 import { ProjectGalleryComponent } from '../project-gallery/project-gallery.component';
 import { TestimonialsComponent } from '../testimonials/testimonials.component';
 import { CountUpDirective } from '../count-up/count-up.directive';
+import { RevealDirective } from '../reveal/reveal.directive';
 import { initFlowbite } from 'flowbite';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HeaderComponent, FooterComponent, ContactFormComponent, WhatsappFabComponent, ProjectGalleryComponent, TestimonialsComponent, CountUpDirective, NgOptimizedImage],
+  imports: [HeaderComponent, FooterComponent, ContactFormComponent, WhatsappFabComponent, ProjectGalleryComponent, TestimonialsComponent, CountUpDirective, RevealDirective, NgOptimizedImage],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
