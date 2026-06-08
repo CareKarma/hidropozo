@@ -132,7 +132,7 @@
   <div class="container mx-auto px-4">
 
     <!-- Encabezado con subrayado acento -->
-    <div class="text-center mb-14">
+    <div class="text-center mb-14" appReveal>
       <p class="text-[#f59e0b] font-semibold uppercase tracking-widest text-xs md:text-sm mb-2">Lo que ofrecemos</p>
       <h2 class="text-3xl md:text-5xl font-extrabold text-[#0B3B4E]">Nuestros Servicios</h2>
       <div class="mx-auto mt-4 w-16 h-1 bg-[#f59e0b] rounded-full"></div>
@@ -141,7 +141,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
 
       <!-- Servicio 1: Perforaciones -->
-      <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col">
+      <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col" appReveal>
         <!-- Imagen con degradado y título superpuesto -->
         <div class="relative h-56 overflow-hidden">
           <img ngSrc="assets/images/hidropozo-obra-1.jpg"
@@ -181,7 +181,7 @@
       </div>
 
       <!-- Servicio 2: Estudios -->
-      <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col">
+      <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col" appReveal>
         <div class="relative h-56 overflow-hidden">
           <img ngSrc="assets/images/pexels-rezwan-1216589.jpg"
                alt="Estudios hidrogeológicos"
@@ -226,7 +226,7 @@
 <section id="proceso" class="w-full py-20 bg-[#0B3B4E] scroll-mt-[72px]">
   <div class="container mx-auto px-4">
 
-    <div class="text-center mb-14">
+    <div class="text-center mb-14" appReveal>
       <p class="text-[#f59e0b] font-semibold uppercase tracking-widest text-xs md:text-sm mb-2">Nuestro proceso</p>
       <h2 class="text-3xl md:text-5xl font-extrabold text-white">Cómo trabajamos</h2>
       <div class="mx-auto mt-4 w-16 h-1 bg-[#f59e0b] rounded-full"></div>
@@ -238,7 +238,7 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
 
       <!-- Paso 1 -->
-      <div class="relative text-center px-4">
+      <div class="relative text-center px-4" appReveal>
         <div class="relative inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-white/5 border border-white/10 mb-5">
           <i class="fas fa-magnifying-glass-chart text-3xl text-[#f59e0b]"></i>
           <span class="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-[#f59e0b] text-[#0B3B4E] font-extrabold text-sm flex items-center justify-center">1</span>
@@ -248,7 +248,7 @@
       </div>
 
       <!-- Paso 2 -->
-      <div class="relative text-center px-4">
+      <div class="relative text-center px-4" appReveal>
         <div class="relative inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-white/5 border border-white/10 mb-5">
           <i class="fas fa-helmet-safety text-3xl text-[#f59e0b]"></i>
           <span class="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-[#f59e0b] text-[#0B3B4E] font-extrabold text-sm flex items-center justify-center">2</span>
@@ -258,7 +258,7 @@
       </div>
 
       <!-- Paso 3 -->
-      <div class="relative text-center px-4">
+      <div class="relative text-center px-4" appReveal>
         <div class="relative inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-white/5 border border-white/10 mb-5">
           <i class="fas fa-gears text-3xl text-[#f59e0b]"></i>
           <span class="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-[#f59e0b] text-[#0B3B4E] font-extrabold text-sm flex items-center justify-center">3</span>
@@ -268,7 +268,7 @@
       </div>
 
       <!-- Paso 4 -->
-      <div class="relative text-center px-4">
+      <div class="relative text-center px-4" appReveal>
         <div class="relative inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-white/5 border border-white/10 mb-5">
           <i class="fas fa-wrench text-3xl text-[#f59e0b]"></i>
           <span class="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-[#f59e0b] text-[#0B3B4E] font-extrabold text-sm flex items-center justify-center">4</span>
@@ -285,7 +285,7 @@
 <section id="proyectos" class="w-full py-20 bg-white scroll-mt-[72px]">
   <div class="container mx-auto px-4">
 
-    <div class="text-center mb-14">
+    <div class="text-center mb-14" appReveal>
       <p class="text-[#f59e0b] font-semibold uppercase tracking-widest text-xs md:text-sm mb-2">Nuestro trabajo</p>
       <h2 class="text-3xl md:text-5xl font-extrabold text-[#0B3B4E]">Proyectos</h2>
       <div class="mx-auto mt-4 w-16 h-1 bg-[#f59e0b] rounded-full"></div>
@@ -294,7 +294,7 @@
       </p>
     </div>
 
-    <app-project-gallery></app-project-gallery>
+    <app-project-gallery appReveal></app-project-gallery>
 
   </div>
 </section>
@@ -303,14 +303,14 @@
 <section id="nosotros" class="w-full py-20 bg-slate-50 scroll-mt-[72px]">
   <div class="container mx-auto px-4">
 
-    <div class="text-center mb-14">
+    <div class="text-center mb-14" appReveal>
       <p class="text-[#f59e0b] font-semibold uppercase tracking-widest text-xs md:text-sm mb-2">Quiénes somos</p>
       <h2 class="text-3xl md:text-5xl font-extrabold text-[#0B3B4E]">Nosotros</h2>
       <div class="mx-auto mt-4 w-16 h-1 bg-[#f59e0b] rounded-full"></div>
     </div>
 
     <!-- Primera fila: imagen izquierda, texto derecha -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center mb-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center mb-16" appReveal>
       <div class="relative rounded-2xl shadow-lg overflow-hidden h-72 md:h-96 order-1">
         <img ngSrc="assets/images/hidropozo-obra-2.jpg"
              alt="Equipo de Hidropozo trabajando en campo"
@@ -336,7 +336,7 @@
     </div>
 
     <!-- Segunda fila: texto izquierda, imagen derecha -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center" appReveal>
       <div class="order-2 md:order-1 space-y-5">
         <p class="text-base md:text-lg text-gray-700 leading-relaxed">
           Contamos con un equipo altamente capacitado y comprometido con la calidad, la seguridad y el cumplimiento
@@ -364,13 +364,13 @@
 <section id="testimonios" class="w-full py-20 bg-white scroll-mt-[72px]">
   <div class="container mx-auto px-4">
 
-    <div class="text-center mb-14">
+    <div class="text-center mb-14" appReveal>
       <p class="text-[#f59e0b] font-semibold uppercase tracking-widest text-xs md:text-sm mb-2">Lo que dicen nuestros clientes</p>
       <h2 class="text-3xl md:text-5xl font-extrabold text-[#0B3B4E]">Reseñas</h2>
       <div class="mx-auto mt-4 w-16 h-1 bg-[#f59e0b] rounded-full"></div>
     </div>
 
-    <app-testimonials></app-testimonials>
+    <app-testimonials appReveal></app-testimonials>
 
   </div>
 </section>
@@ -379,7 +379,7 @@
 <section id="contacto" class="w-full py-20 bg-slate-50 scroll-mt-[72px]">
   <div class="container mx-auto px-4">
 
-    <div class="text-center mb-14">
+    <div class="text-center mb-14" appReveal>
       <p class="text-[#f59e0b] font-semibold uppercase tracking-widest text-xs md:text-sm mb-2">Estamos para servirle</p>
       <h2 class="text-3xl md:text-5xl font-extrabold text-[#0B3B4E]">Contáctenos</h2>
       <div class="mx-auto mt-4 w-16 h-1 bg-[#f59e0b] rounded-full"></div>
@@ -430,7 +430,7 @@
       </div>
 
       <!-- Columna derecha: formulario -->
-      <div id="form-contacto" class="scroll-mt-[88px]">
+      <div id="form-contacto" class="scroll-mt-[88px]" appReveal>
         <app-contact-form></app-contact-form>
       </div>
 

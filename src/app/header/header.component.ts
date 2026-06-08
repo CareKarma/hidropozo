@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -11,10 +11,17 @@ import { CommonModule } from '@angular/common';
 export class HeaderComponent implements OnInit, OnDestroy {
   isMobileMenuOpen = false;
   activeSection = 'inicio';
+  scrolled = false; // true cuando se baja del tope (header sólido)
 
   private observer!: IntersectionObserver;
 
+  @HostListener('window:scroll')
+  onScroll() {
+    this.scrolled = window.scrollY > 24;
+  }
+
   ngOnInit() {
+    this.onScroll(); // estado inicial correcto si la página carga ya scrolleada
     this.observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
