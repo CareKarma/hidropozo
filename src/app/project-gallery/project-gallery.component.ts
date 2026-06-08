@@ -65,6 +65,11 @@ export class ProjectGalleryComponent {
     return group.expanded ? group.items : group.items.slice(0, this.limit);
   }
 
+  // Ruta WebP equivalente a una imagen .jpg (para <source type="image/webp">).
+  webp(src: string): string {
+    return src.replace(/\.jpg$/i, '.webp');
+  }
+
   playVideo(item: GalleryItem, video: HTMLVideoElement) {
     item.playing = true;
     video.play();

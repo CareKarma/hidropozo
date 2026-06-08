@@ -2,9 +2,9 @@
 <footer class="w-full bg-[#072733] text-white">
 
   <div class="container mx-auto px-4 md:px-8 py-12">
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
 
-      <!-- Sección 1: Logo y descripción -->
+      <!-- Columna 1: Logo y descripción -->
       <div>
         <div class="flex items-center gap-3 mb-4">
           <img src="/assets/IconOnly_Transparent_NoBuffer.png" alt="Hidropozo Logo" class="h-12">
@@ -12,13 +12,31 @@
             HIDROPOZO<span class="text-xs align-super ml-0.5 font-semibold">SRL</span>
           </span>
         </div>
-        <p class="text-sm text-slate-400 leading-relaxed">
+        <p class="text-sm text-slate-400 leading-relaxed mb-5">
           Especialistas en perforación de pozos y mantenimiento. Soluciones confiables y eficientes
           para sus necesidades hídricas.
         </p>
+        <!-- Síguenos -->
+        <a href="https://www.instagram.com/hidropozosrl"
+           class="w-10 h-10 rounded-full bg-white/10 hover:bg-[#f59e0b] flex items-center justify-center transition-all duration-300"
+           target="_blank" rel="noopener noreferrer" aria-label="Instagram Hidropozo">
+          <i class="fab fa-instagram text-lg"></i>
+        </a>
       </div>
 
-      <!-- Sección 2: Información de contacto -->
+      <!-- Columna 2: Enlaces rápidos -->
+      <div>
+        <h3 class="text-sm font-bold mb-4 text-[#f59e0b] uppercase tracking-wider">Enlaces</h3>
+        <ul class="space-y-2.5 text-sm text-slate-400">
+          <li><a href="#inicio" class="hover:text-white transition-colors">Inicio</a></li>
+          <li><a href="#servicios" class="hover:text-white transition-colors">Servicios</a></li>
+          <li><a href="#proyectos" class="hover:text-white transition-colors">Proyectos</a></li>
+          <li><a href="#nosotros" class="hover:text-white transition-colors">Nosotros</a></li>
+          <li><a href="#contacto" class="hover:text-white transition-colors">Contacto</a></li>
+        </ul>
+      </div>
+
+      <!-- Columna 3: Información de contacto -->
       <div>
         <h3 class="text-sm font-bold mb-4 text-[#f59e0b] uppercase tracking-wider">Contacto</h3>
         <ul class="space-y-3 text-sm text-slate-400">
@@ -39,18 +57,22 @@
         </ul>
       </div>
 
-      <!-- Sección 3: Redes y contacto rápido -->
+      <!-- Columna 4: Horario de atención -->
       <div>
-        <h3 class="text-sm font-bold mb-4 text-[#f59e0b] uppercase tracking-wider">Síguenos</h3>
-
-        <!-- Instagram -->
-        <div class="flex gap-3">
-          <a href="https://www.instagram.com/hidropozosrl"
-             class="w-10 h-10 rounded-full bg-white/10 hover:bg-[#f59e0b] flex items-center justify-center transition-all duration-300"
-             target="_blank" rel="noopener noreferrer" aria-label="Instagram Hidropozo">
-            <i class="fab fa-instagram text-lg"></i>
-          </a>
-        </div>
+        <h3 class="text-sm font-bold mb-4 text-[#f59e0b] uppercase tracking-wider">Horario</h3>
+        <ul class="space-y-3 text-sm text-slate-400">
+          <li class="flex items-start gap-3">
+            <i class="fas fa-clock text-[#f59e0b] mt-0.5 shrink-0 w-4 text-center"></i>
+            <span>
+              Lun – Vie: 8:00 AM – 5:00 PM<br>
+              Sábado: 8:00 AM – 12:00 PM
+            </span>
+          </li>
+          <li class="flex items-center gap-3 text-[#f59e0b]">
+            <i class="fas fa-headset shrink-0 w-4 text-center"></i>
+            <span class="font-semibold">Emergencias 24/7</span>
+          </li>
+        </ul>
       </div>
     </div>
   </div>

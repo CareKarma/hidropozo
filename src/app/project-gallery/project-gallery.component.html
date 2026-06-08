@@ -13,9 +13,12 @@
         <div class="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 h-64 bg-[#0B3B4E]">
 
           @if (item.type === 'image') {
-            <!-- Tarjeta de imagen -->
-            <img [src]="item.src" [alt]="item.title" loading="lazy"
-                 class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <!-- Tarjeta de imagen (WebP con fallback a JPG) -->
+            <picture>
+              <source [srcset]="webp(item.src)" type="image/webp">
+              <img [src]="item.src" [alt]="item.title" loading="lazy"
+                   class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </picture>
 
           } @else {
             <!-- Tarjeta de video -->
