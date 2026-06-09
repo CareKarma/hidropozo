@@ -25,11 +25,11 @@
       <div>
         <h3 class="text-sm font-bold mb-4 text-[#f59e0b] uppercase tracking-wider">Enlaces</h3>
         <ul class="space-y-2.5 text-sm text-slate-400">
-          <li><a href="#inicio" class="hover:text-white transition-colors">Inicio</a></li>
-          <li><a href="#servicios" class="hover:text-white transition-colors">Servicios</a></li>
-          <li><a href="#proyectos" class="hover:text-white transition-colors">Proyectos</a></li>
-          <li><a href="#nosotros" class="hover:text-white transition-colors">Nosotros</a></li>
-          <li><a href="#contacto" class="hover:text-white transition-colors">Contacto</a></li>
+          <li><a routerLink="/home" fragment="inicio" class="hover:text-white transition-colors">Inicio</a></li>
+          <li><a routerLink="/home" fragment="servicios" class="hover:text-white transition-colors">Servicios</a></li>
+          <li><a routerLink="/home" fragment="proyectos" class="hover:text-white transition-colors">Proyectos</a></li>
+          <li><a routerLink="/home" fragment="nosotros" class="hover:text-white transition-colors">Nosotros</a></li>
+          <li><a routerLink="/home" fragment="contacto" class="hover:text-white transition-colors">Contacto</a></li>
         </ul>
       </div>
 
@@ -77,6 +77,11 @@
   <!-- Barra de derechos de autor -->
   <div class="border-t border-white/10">
     <div class="container mx-auto px-4 md:px-8 py-4 text-center">
+      <p class="text-xs text-slate-500 mb-1">
+        <a routerLink="/terminos" class="hover:text-white transition-colors underline">Términos y Condiciones</a>
+        <span class="mx-1.5">·</span>
+        <a routerLink="/privacidad" class="hover:text-white transition-colors underline">Política de Privacidad</a>
+      </p>
       <p class="text-xs text-slate-500">
         &copy; {{ currentYear }} Hidropozo SRL. Todos los derechos reservados.
       </p>
