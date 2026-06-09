@@ -1,5 +1,7 @@
-import { Component, AfterViewInit } from '@angular/core';
-import { NgOptimizedImage } from '@angular/common';
+import { Component, AfterViewInit, OnInit, Inject } from '@angular/core';
+import { NgOptimizedImage, DOCUMENT } from '@angular/common';
+import { Title } from '@angular/platform-browser';
+import { setCanonical } from '../seo/canonical';
 import { HeaderComponent } from '../header/header.component';
 import { FooterComponent } from '../footer/footer.component';
 import { ContactFormComponent } from '../contact-form/contact-form.component';
@@ -17,7 +19,15 @@ import { initFlowbite } from 'flowbite';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements AfterViewInit {
+export class HomeComponent implements OnInit, AfterViewInit {
+  constructor(private title: Title, @Inject(DOCUMENT) private doc: Document) {}
+
+  ngOnInit() {
+    // Restablece título y canonical por si se llega desde una página legal (que los cambia)
+    this.title.setTitle('Hidropozo SRL — Perforación y Mantenimiento de Pozos en República Dominicana');
+    setCanonical(this.doc, 'https://hidropozosrl.com/');
+  }
+
   ngAfterViewInit() {
     initFlowbite();
   }
