@@ -10,36 +10,25 @@
   <div id="hero-carousel" class="relative w-full h-full" data-carousel="slide">
     <div class="relative h-full overflow-hidden">
 
-      <!-- Slide 1: activo por defecto — imagen horizontal (encaja bien en hero ancho) -->
+      <!-- Slide 1: activo por defecto — traslado de perforadora (alta resolución, sin personas) -->
       <div class="duration-1000 ease-in-out" data-carousel-item="active">
         <picture>
-          <source srcset="assets/images/hidropozo-perforacion-4.webp" type="image/webp">
-          <img src="assets/images/hidropozo-perforacion-4.jpg"
+          <source srcset="assets/images/hidropozo-hero-1.webp" type="image/webp">
+          <img src="assets/images/hidropozo-hero-1.jpg"
                class="absolute w-full h-full object-cover object-center"
-               alt="Equipo de perforación Hidropozo en campo"
+               alt="Traslado de equipo de perforación Hidropozo hacia proyecto"
                fetchpriority="high">
         </picture>
       </div>
 
-      <!-- Slide 2 -->
+      <!-- Slide 2: perforadora en operación (alta resolución, operario de espaldas) -->
       <div class="hidden duration-1000 ease-in-out" data-carousel-item>
         <picture>
-          <source srcset="assets/images/hidropozo-perforacion-2.webp" type="image/webp">
-          <img src="assets/images/hidropozo-perforacion-2.jpg"
+          <source srcset="assets/images/hidropozo-hero-2.webp" type="image/webp">
+          <img src="assets/images/hidropozo-hero-2.jpg"
                loading="lazy"
                class="absolute w-full h-full object-cover object-center"
-               alt="Aforo de pozo en plantación Hidropozo">
-        </picture>
-      </div>
-
-      <!-- Slide 3 -->
-      <div class="hidden duration-1000 ease-in-out" data-carousel-item>
-        <picture>
-          <source srcset="assets/images/hidropozo-perforacion-3.webp" type="image/webp">
-          <img src="assets/images/hidropozo-perforacion-3.jpg"
-               loading="lazy"
-               class="absolute w-full h-full object-cover object-center"
-               alt="Perforadora Hidropozo en obra">
+               alt="Perforadora Hidropozo en plena operación">
         </picture>
       </div>
 
@@ -49,7 +38,6 @@
     <div class="absolute z-[40] flex gap-3 bottom-6 left-1/2 -translate-x-1/2">
       <button type="button" class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all duration-300" aria-label="Slide 1" data-carousel-slide-to="0"></button>
       <button type="button" class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all duration-300" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-      <button type="button" class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all duration-300" aria-label="Slide 3" data-carousel-slide-to="2"></button>
     </div>
 
     <!-- Botón: anterior — z-[40] para estar sobre el texto del hero -->
