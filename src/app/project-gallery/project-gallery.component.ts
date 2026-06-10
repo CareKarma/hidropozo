@@ -36,6 +36,7 @@ export class ProjectGalleryComponent {
     {
       heading: 'Perforación de pozos',
       items: [
+        { type: 'video', src: 'assets/images/hidropozo-proyecto-7.mp4', title: 'Perforación exitosa de pozo' },
         { type: 'video', src: 'assets/images/hidropozo-proyecto-1.mp4', title: 'Pozo en producción' },
         { type: 'image', src: 'assets/images/hidropozo-perforacion-3.jpg', title: 'Equipo de perforación en obra' },
         { type: 'video', src: 'assets/images/hidropozo-proyecto-2.mp4', title: 'Perforación en proceso' },
