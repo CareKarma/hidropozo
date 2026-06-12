@@ -37,13 +37,18 @@ export class ProjectGalleryComponent {
       heading: 'Perforación de pozos',
       items: [
         { type: 'video', src: 'assets/images/hidropozo-proyecto-7.mp4', title: 'Perforación exitosa de pozo' },
-        { type: 'video', src: 'assets/images/hidropozo-proyecto-1.mp4', title: 'Pozo en producción' },
+        { type: 'video', src: 'assets/images/hidropozo-proyecto-9.mp4', title: 'Pozo brotando agua — toma amplia' },
         { type: 'image', src: 'assets/images/hidropozo-perforacion-3.jpg', title: 'Equipo de perforación en obra' },
-        { type: 'video', src: 'assets/images/hidropozo-proyecto-2.mp4', title: 'Perforación en proceso' },
+        { type: 'video', src: 'assets/images/hidropozo-proyecto-8.mp4', title: 'Pozo brotando agua' },
         { type: 'image', src: 'assets/images/hidropozo-perforacion-1.jpg', title: 'Supervisión de perforación' },
+        { type: 'video', src: 'assets/images/hidropozo-proyecto-1.mp4', title: 'Pozo en producción' },
         { type: 'image', src: 'assets/images/hidropozo-perforacion-5.jpg', title: 'Perforación de pozo profundo' },
-        { type: 'video', src: 'assets/images/hidropozo-proyecto-3.mp4', title: 'Pozo en operación' },
+        { type: 'video', src: 'assets/images/hidropozo-proyecto-10.mp4', title: 'Perforación en zona urbana' },
         { type: 'image', src: 'assets/images/hidropozo-obra-1.jpg', title: 'Trabajo de campo' },
+        { type: 'video', src: 'assets/images/hidropozo-proyecto-2.mp4', title: 'Perforación en proceso' },
+        { type: 'video', src: 'assets/images/hidropozo-proyecto-11.mp4', title: 'Perforadora en obra' },
+        { type: 'video', src: 'assets/images/hidropozo-proyecto-3.mp4', title: 'Pozo en operación' },
+        { type: 'video', src: 'assets/images/hidropozo-proyecto-12.mp4', title: 'Traslado de equipo de perforación' },
       ],
     },
     {
@@ -57,7 +62,7 @@ export class ProjectGalleryComponent {
   ];
 
   // Máximo de tarjetas visibles por apartado antes de mostrar "Ver más".
-  readonly limit = 2;
+  readonly limit = 3;
 
   @ViewChildren('videoEl') videoEls!: QueryList<ElementRef<HTMLVideoElement>>;
 
@@ -69,6 +74,11 @@ export class ProjectGalleryComponent {
   // Ruta WebP equivalente a una imagen .jpg (para <source type="image/webp">).
   webp(src: string): string {
     return src.replace(/\.jpg$/i, '.webp');
+  }
+
+  // Portada (fotograma nítido) de un video: mismo nombre + '-poster.jpg'.
+  posterOf(src: string): string {
+    return src.replace(/\.mp4$/i, '-poster.jpg');
   }
 
   playVideo(item: GalleryItem, video: HTMLVideoElement) {
