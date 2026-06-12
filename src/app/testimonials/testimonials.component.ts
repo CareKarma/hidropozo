@@ -22,7 +22,7 @@ export class TestimonialsComponent {
     {
       quote: 'Perforaron el pozo de mi finca y quedé muy satisfecho. Cumplieron con el tiempo que acordamos y el agua salió de buena calidad. Gente seria y trabajadora.',
       name: 'Gabriel Félix',
-      role: 'San Juan',
+      role: 'Las Charcas de María Nova',
       stars: 5,
     },
     {
