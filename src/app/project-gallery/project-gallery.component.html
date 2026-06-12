@@ -21,8 +21,9 @@
             </picture>
 
           } @else {
-            <!-- Tarjeta de video -->
-            <video #videoEl [attr.src]="item.src" preload="metadata" playsinline
+            <!-- Tarjeta de video: portada nítida; el video solo se descarga al reproducir -->
+            <video #videoEl [attr.src]="item.src" [attr.poster]="posterOf(item.src)"
+                   preload="none" playsinline
                    [controls]="item.playing" (play)="onPlay(videoEl)"
                    class="absolute inset-0 w-full h-full object-cover"></video>
 
