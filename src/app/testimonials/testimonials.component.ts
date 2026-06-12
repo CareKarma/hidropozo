@@ -25,6 +25,12 @@ export class TestimonialsComponent {
       role: 'San Juan',
       stars: 5,
     },
+    {
+      quote: 'Profesionales, responsables y un servicio de primera.',
+      name: 'Freddy Cedano',
+      role: 'Las Charcas de María Nova',
+      stars: 5,
+    },
   ];
 
   // Helper para iterar las estrellas en la plantilla.
