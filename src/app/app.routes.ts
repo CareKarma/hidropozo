@@ -12,9 +12,17 @@ export const routes: Routes = [
         component: HomeComponent
     },
     {
-        // Página de servicio (SEO): carga diferida
+        // Páginas de servicio (SEO): carga diferida
         path: 'servicios/perforacion-de-pozos',
         loadComponent: () => import('./services/perforacion-pozos.component').then(m => m.PerforacionPozosComponent)
+    },
+    {
+        path: 'servicios/estudios-hidrogeologicos',
+        loadComponent: () => import('./services/estudios-hidrogeologicos.component').then(m => m.EstudiosHidrogeologicosComponent)
+    },
+    {
+        path: 'servicios/mantenimiento-de-pozos',
+        loadComponent: () => import('./services/mantenimiento-de-pozos.component').then(m => m.MantenimientoDePozosComponent)
     },
     {
         // Páginas legales: carga diferida para no engordar el bundle inicial
