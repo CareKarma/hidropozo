@@ -1,5 +1,6 @@
 import { Component, AfterViewInit, OnInit, Inject } from '@angular/core';
 import { NgOptimizedImage, DOCUMENT } from '@angular/common';
+import { RouterLink } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import { setCanonical } from '../seo/canonical';
 import { HeaderComponent } from '../header/header.component';
@@ -15,7 +16,7 @@ import { initFlowbite } from 'flowbite';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HeaderComponent, FooterComponent, ContactFormComponent, WhatsappFabComponent, ProjectGalleryComponent, TestimonialsComponent, CountUpDirective, RevealDirective, NgOptimizedImage],
+  imports: [HeaderComponent, FooterComponent, ContactFormComponent, WhatsappFabComponent, ProjectGalleryComponent, TestimonialsComponent, CountUpDirective, RevealDirective, NgOptimizedImage, RouterLink],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })

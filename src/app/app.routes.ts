@@ -12,6 +12,11 @@ export const routes: Routes = [
         component: HomeComponent
     },
     {
+        // Página de servicio (SEO): carga diferida
+        path: 'servicios/perforacion-de-pozos',
+        loadComponent: () => import('./services/perforacion-pozos.component').then(m => m.PerforacionPozosComponent)
+    },
+    {
         // Páginas legales: carga diferida para no engordar el bundle inicial
         path: 'terminos',
         loadComponent: () => import('./legal/terminos.component').then(m => m.TerminosComponent)
