@@ -4,103 +4,97 @@
 </div>
 
 <!-- ===== SECCIÓN INICIO / HERO ===== -->
-<section id="inicio" class="relative w-full h-[65vh] md:h-[75vh] lg:h-[80vh] lg:max-h-[760px] overflow-hidden scroll-mt-[72px]">
+<!-- Hero "contenido": texto a la izquierda sobre azul de marca + carrusel en tarjeta a la derecha.
+     La imagen NO se estira a pantalla completa, por eso se ve nítida. -->
+<section id="inicio" class="relative w-full bg-[#0B3B4E] scroll-mt-[72px]">
+  <div class="container mx-auto px-6 sm:px-10 lg:px-16 py-12 md:py-16 lg:py-20">
+    <div class="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
 
-  <!-- Carousel Flowbite -->
-  <div id="hero-carousel" class="relative w-full h-full" data-carousel="slide">
-    <div class="relative h-full overflow-hidden">
-
-      <!-- Slide 1: activo por defecto — equipo Hidropozo (chaleco) en perforación -->
-      <div class="duration-1000 ease-in-out" data-carousel-item="active">
-        <picture>
-          <source srcset="assets/images/hidropozo-hero-4.webp" type="image/webp">
-          <img src="assets/images/hidropozo-hero-4.jpg"
-               class="absolute w-full h-full object-cover object-center"
-               alt="Equipo de Hidropozo SRL perforando un pozo de agua"
-               fetchpriority="high">
-        </picture>
+      <!-- Columna texto -->
+      <div class="max-w-xl order-2 lg:order-1">
+        <span class="inline-block text-[#7FD4C1] text-xs sm:text-sm font-semibold uppercase tracking-[0.15em] mb-4 animate-hero-in">
+          Perforación de pozos · República Dominicana
+        </span>
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-5 animate-hero-in leading-tight">
+          HIDROPOZO<span class="text-xl sm:text-2xl align-super ml-1 font-bold">SRL</span>
+        </h1>
+        <p class="text-base sm:text-lg text-white/90 max-w-xl mb-8 animate-hero-in-up leading-relaxed">
+          Especialistas en perforación de pozos y mantenimiento. Soluciones confiables y eficientes para sus necesidades de agua.
+        </p>
+        <div class="flex flex-wrap gap-4 animate-hero-in-up">
+          <button (click)="onRequestService('service1')"
+                  class="px-6 py-3 bg-[#f59e0b] hover:bg-[#d97706] text-white font-bold rounded-lg transition-all duration-300 hover:scale-105 shadow-lg text-sm md:text-base">
+            Solicitar Servicio
+          </button>
+          <button (click)="scrollToSection('#nosotros')"
+                  class="px-6 py-3 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-[#0B3B4E] transition-all duration-300 text-sm md:text-base">
+            Conócenos
+          </button>
+        </div>
       </div>
 
-      <!-- Slide 2: perforadora en operación (alta resolución, operario de espaldas) -->
-      <div class="hidden duration-1000 ease-in-out" data-carousel-item>
-        <picture>
-          <source srcset="assets/images/hidropozo-hero-2.webp" type="image/webp">
-          <img src="assets/images/hidropozo-hero-2.jpg"
-               loading="lazy"
-               class="absolute w-full h-full object-cover object-center"
-               alt="Perforadora Hidropozo en plena operación">
-        </picture>
+      <!-- Columna imagen: carrusel Flowbite CONTENIDO en una tarjeta -->
+      <div class="relative order-1 lg:order-2 animate-hero-in-up">
+        <div id="hero-carousel" class="relative w-full rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10" data-carousel="slide">
+          <div class="relative aspect-[4/3] overflow-hidden">
+
+            <!-- Slide 1: activo por defecto — equipo Hidropozo (chaleco) en perforación -->
+            <div class="duration-1000 ease-in-out" data-carousel-item="active">
+              <picture>
+                <source srcset="assets/images/hidropozo-hero-4.webp" type="image/webp">
+                <img src="assets/images/hidropozo-hero-4.jpg"
+                     class="absolute inset-0 w-full h-full object-cover object-center"
+                     alt="Equipo de Hidropozo SRL perforando un pozo de agua"
+                     fetchpriority="high">
+              </picture>
+            </div>
+
+            <!-- Slide 2: perforadora en operación -->
+            <div class="hidden duration-1000 ease-in-out" data-carousel-item>
+              <picture>
+                <source srcset="assets/images/hidropozo-hero-2.webp" type="image/webp">
+                <img src="assets/images/hidropozo-hero-2.jpg"
+                     loading="lazy"
+                     class="absolute inset-0 w-full h-full object-cover object-center"
+                     alt="Perforadora Hidropozo en plena operación">
+              </picture>
+            </div>
+
+            <!-- Slide 3: equipo de perforación Hidropozo en obra -->
+            <div class="hidden duration-1000 ease-in-out" data-carousel-item>
+              <picture>
+                <source srcset="assets/images/hidropozo-obra-3.webp" type="image/webp">
+                <img src="assets/images/hidropozo-obra-3.jpg"
+                     loading="lazy"
+                     class="absolute inset-0 w-full h-full object-cover object-center"
+                     alt="Equipo de perforación Hidropozo en obra">
+              </picture>
+            </div>
+
+          </div>
+
+          <!-- Indicadores -->
+          <div class="absolute z-[20] flex gap-2 bottom-3 right-3">
+            <button type="button" class="w-2.5 h-2.5 rounded-full bg-white/50 hover:bg-white transition-all duration-300" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+            <button type="button" class="w-2.5 h-2.5 rounded-full bg-white/50 hover:bg-white transition-all duration-300" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+            <button type="button" class="w-2.5 h-2.5 rounded-full bg-white/50 hover:bg-white transition-all duration-300" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+          </div>
+
+          <!-- Tarjeta flotante: dato real de experiencia -->
+          <div class="absolute z-[20] bottom-3 left-3 bg-white rounded-xl shadow-lg px-3 py-2 flex items-center gap-2.5">
+            <span class="flex items-center justify-center w-9 h-9 rounded-lg bg-[#0B3B4E]/10 text-[#0B3B4E]">
+              <i class="fa-solid fa-award text-lg" aria-hidden="true"></i>
+            </span>
+            <div class="leading-tight">
+              <p class="text-base font-extrabold text-[#0B3B4E]">+30 años</p>
+              <p class="text-[11px] text-slate-500">de experiencia</p>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <!-- Slide 3: equipo de perforación Hidropozo en obra -->
-      <div class="hidden duration-1000 ease-in-out" data-carousel-item>
-        <picture>
-          <source srcset="assets/images/hidropozo-obra-3.webp" type="image/webp">
-          <img src="assets/images/hidropozo-obra-3.jpg"
-               loading="lazy"
-               class="absolute w-full h-full object-cover object-center"
-               alt="Equipo de perforación Hidropozo en obra">
-        </picture>
-      </div>
-
-    </div>
-
-    <!-- Indicadores: z-[40] para estar encima del texto del hero (z-[35]) -->
-    <div class="absolute z-[40] flex gap-3 bottom-6 left-1/2 -translate-x-1/2">
-      <button type="button" class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all duration-300" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-      <button type="button" class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all duration-300" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-      <button type="button" class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all duration-300" aria-label="Slide 3" data-carousel-slide-to="2"></button>
-    </div>
-
-    <!-- Botón: anterior — z-[40] para estar sobre el texto del hero -->
-    <button type="button"
-            class="absolute top-0 left-0 z-[40] flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-            data-carousel-prev>
-      <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-black/20 backdrop-blur-sm group-hover:bg-black/40 transition">
-        <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 6 10" xmlns="http://www.w3.org/2000/svg">
-          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
-        </svg>
-        <span class="sr-only">Anterior</span>
-      </span>
-    </button>
-
-    <!-- Botón: siguiente — z-[40] para estar sobre el texto del hero -->
-    <button type="button"
-            class="absolute top-0 right-0 z-[40] flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-            data-carousel-next>
-      <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-black/20 backdrop-blur-sm group-hover:bg-black/40 transition">
-        <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 6 10" xmlns="http://www.w3.org/2000/svg">
-          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
-        </svg>
-        <span class="sr-only">Siguiente</span>
-      </span>
-    </button>
-  </div>
-
-  <!-- Gradiente: z-[22] para estar encima del slide activo de Flowbite (z=20) -->
-  <div class="absolute inset-0 bg-gradient-to-r from-[#0B3B4E]/85 via-[#0B3B4E]/45 to-transparent z-[22] pointer-events-none"></div>
-
-  <!-- Texto del hero: z-[35] encima del gradiente, debajo de los botones del carousel (z-[40]) -->
-  <div class="absolute inset-0 z-[35] flex flex-col justify-center px-6 sm:px-12 md:px-16 lg:px-24 pointer-events-none">
-    <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-4 animate-hero-in leading-tight drop-shadow-lg">
-      HIDROPOZO<span class="text-xl sm:text-2xl md:text-3xl align-super ml-1 font-bold">SRL</span>
-    </h1>
-    <p class="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 max-w-xl mb-8 animate-hero-in-up leading-relaxed drop-shadow">
-      Especialistas en perforación de pozos y mantenimiento. Soluciones confiables y eficientes para sus necesidades de agua.
-    </p>
-    <!-- pointer-events-auto para que los botones sean clickeables dentro del div no-interactivo -->
-    <div class="flex flex-wrap gap-4 animate-hero-in-up pointer-events-auto">
-      <button (click)="onRequestService('service1')"
-              class="px-6 py-3 bg-[#f59e0b] hover:bg-[#d97706] text-white font-bold rounded-lg transition-all duration-300 hover:scale-105 shadow-lg text-sm md:text-base">
-        Solicitar Servicio
-      </button>
-      <button (click)="scrollToSection('#nosotros')"
-              class="px-6 py-3 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-[#0B3B4E] transition-all duration-300 text-sm md:text-base">
-        Conócenos
-      </button>
     </div>
   </div>
-
 </section>
 
 <!-- ===== BARRA DE ESTADÍSTICAS ===== -->
