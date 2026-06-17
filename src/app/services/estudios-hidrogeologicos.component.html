@@ -1,0 +1,167 @@
+<!-- Barra superior: logo + navegación de regreso -->
+<div class="w-full bg-[#0B3B4E] sticky top-0 z-50">
+  <div class="container mx-auto flex items-center justify-between h-[72px] px-4 md:px-8">
+    <a routerLink="/home" aria-label="Hidropozo SRL — Inicio" class="flex items-center">
+      <img src="/assets/logo-white.png" alt="Hidropozo SRL" class="h-9 w-auto">
+    </a>
+    <div class="flex items-center gap-6">
+      <a routerLink="/home" fragment="servicios"
+         class="hidden sm:inline text-sm font-semibold text-white/90 hover:text-[#f59e0b] transition-colors">Servicios</a>
+      <a routerLink="/home" fragment="form-contacto"
+         class="hidden sm:inline text-sm font-semibold text-white/90 hover:text-[#f59e0b] transition-colors">Contacto</a>
+      <a routerLink="/home"
+         class="text-sm font-semibold text-white/90 hover:text-[#f59e0b] transition-colors flex items-center gap-2">
+        <i class="fas fa-arrow-left text-xs"></i> Volver al inicio
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== HERO del servicio ===== -->
+<section class="relative w-full bg-[#0B3B4E] overflow-hidden">
+  <div class="container mx-auto px-4 md:px-8 py-14 md:py-20">
+    <div class="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+      <div class="max-w-xl order-2 lg:order-1">
+        <p class="text-[#7FD4C1] font-semibold uppercase tracking-[0.15em] text-xs sm:text-sm mb-4">
+          Servicio · Estudios
+        </p>
+        <h1 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-5">
+          Estudios hidrogeológicos en República Dominicana
+        </h1>
+        <p class="text-base sm:text-lg text-white/90 leading-relaxed mb-8">
+          Antes de perforar, estudiamos el terreno para ubicar la mejor fuente de agua y reducir riesgos.
+          Más de 30 años interpretando el subsuelo dominicano.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a routerLink="/home" fragment="form-contacto"
+             class="px-6 py-3 bg-[#f59e0b] hover:bg-[#d97706] text-white font-bold rounded-lg transition-all duration-300 hover:scale-105 shadow-lg text-sm md:text-base">
+            Solicitar cotización
+          </a>
+          <a href="https://wa.me/18093593011" target="_blank" rel="noopener"
+             class="px-6 py-3 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-[#0B3B4E] transition-all duration-300 text-sm md:text-base flex items-center gap-2">
+            <i class="fab fa-whatsapp text-lg"></i> Escríbenos
+          </a>
+        </div>
+      </div>
+      <div class="relative order-1 lg:order-2">
+        <div class="rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10 aspect-[4/3]">
+          <img src="assets/images/hidropozo-perforacion-3.jpg"
+               alt="Equipo de Hidropozo SRL realizando pruebas en un pozo de agua"
+               class="w-full h-full object-cover object-center"
+               fetchpriority="high">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTENIDO ===== -->
+<section class="w-full bg-white py-14 md:py-20">
+  <div class="container mx-auto px-4">
+    <div class="max-w-3xl mx-auto">
+
+      <!-- Intro -->
+      <div appReveal>
+        <h2 class="font-display text-2xl md:text-3xl font-extrabold text-[#0B3B4E] mb-4">
+          ¿Qué es un estudio hidrogeológico?
+        </h2>
+        <p class="text-gray-600 leading-relaxed mb-4">
+          Un estudio hidrogeológico es el análisis técnico del subsuelo que permite conocer la presencia,
+          profundidad y calidad del <strong>agua subterránea</strong> en un terreno. Es el paso previo que marca
+          la diferencia entre un pozo exitoso y una inversión perdida.
+        </p>
+        <p class="text-gray-600 leading-relaxed">
+          En <strong>Hidropozo SRL</strong> realizamos estos estudios con más de 30 años de experiencia
+          interpretando el subsuelo dominicano, para que cada perforación se ejecute donde hay mayor probabilidad
+          de encontrar agua de buen caudal y calidad.
+        </p>
+      </div>
+
+      <!-- Qué incluyen -->
+      <div class="mt-12" appReveal>
+        <h2 class="font-display text-2xl md:text-3xl font-extrabold text-[#0B3B4E] mb-6">
+          ¿Qué incluyen nuestros estudios?
+        </h2>
+        <div class="grid sm:grid-cols-3 gap-5">
+          <div class="bg-slate-50 rounded-xl p-5 border border-slate-100">
+            <i class="fas fa-magnifying-glass-location text-2xl text-[#f59e0b] mb-3"></i>
+            <h3 class="font-bold text-[#0B3B4E] mb-1">Prospección de aguas subterráneas</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">Localización del mejor punto para perforar según el terreno.</p>
+          </div>
+          <div class="bg-slate-50 rounded-xl p-5 border border-slate-100">
+            <i class="fas fa-gauge-high text-2xl text-[#f59e0b] mb-3"></i>
+            <h3 class="font-bold text-[#0B3B4E] mb-1">Pruebas de bombeo y aforo</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">Medición del caudal real y el rendimiento del pozo.</p>
+          </div>
+          <div class="bg-slate-50 rounded-xl p-5 border border-slate-100">
+            <i class="fas fa-droplet text-2xl text-[#f59e0b] mb-3"></i>
+            <h3 class="font-bold text-[#0B3B4E] mb-1">Pruebas de infiltración</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">Evaluación de la capacidad de absorción del suelo.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Por qué -->
+      <div class="mt-12" appReveal>
+        <h2 class="font-display text-2xl md:text-3xl font-extrabold text-[#0B3B4E] mb-6">
+          ¿Por qué hacer el estudio antes de perforar?
+        </h2>
+        <ul class="space-y-3">
+          <li class="flex items-start gap-3 text-gray-700">
+            <i class="fas fa-circle-check text-[#f59e0b] mt-1"></i>
+            <span><strong>Reduce el riesgo</strong> de perforar un pozo seco o de bajo caudal.</span>
+          </li>
+          <li class="flex items-start gap-3 text-gray-700">
+            <i class="fas fa-circle-check text-[#f59e0b] mt-1"></i>
+            <span><strong>Ubica la mejor fuente</strong> de agua dentro de su propiedad.</span>
+          </li>
+          <li class="flex items-start gap-3 text-gray-700">
+            <i class="fas fa-circle-check text-[#f59e0b] mt-1"></i>
+            <span><strong>Optimiza la inversión</strong>: se perfora con datos, no a ciegas.</span>
+          </li>
+          <li class="flex items-start gap-3 text-gray-700">
+            <i class="fas fa-circle-check text-[#f59e0b] mt-1"></i>
+            <span><strong>Respaldo técnico</strong> para proyectos que lo requieran.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Aplicaciones -->
+      <div class="mt-12" appReveal>
+        <h2 class="font-display text-2xl md:text-3xl font-extrabold text-[#0B3B4E] mb-4">
+          ¿Para quién?
+        </h2>
+        <p class="text-gray-600 leading-relaxed">
+          Recomendamos el estudio a quienes planean <strong>perforar un pozo</strong> en viviendas, fincas,
+          comercios o industrias, así como a proyectos de construcción que necesitan
+          <strong>pruebas de infiltración</strong> para drenaje. Evaluamos su terreno y le entregamos una base
+          técnica clara para decidir.
+        </p>
+      </div>
+
+      <!-- CTA final -->
+      <div class="mt-14 bg-[#0B3B4E] rounded-2xl p-8 md:p-10 text-center" appReveal>
+        <h2 class="font-display text-2xl md:text-3xl font-extrabold text-white mb-3">
+          ¿Va a perforar un pozo?
+        </h2>
+        <p class="text-slate-300 leading-relaxed mb-7 max-w-xl mx-auto">
+          Empiece con un estudio del terreno. Cuéntenos su proyecto y le preparamos una cotización sin compromiso.
+        </p>
+        <div class="flex flex-wrap gap-4 justify-center">
+          <a routerLink="/home" fragment="form-contacto"
+             class="px-7 py-3 bg-[#f59e0b] hover:bg-[#d97706] text-white font-bold rounded-lg transition-all duration-300 hover:scale-105 shadow-lg text-sm md:text-base">
+            Solicitar cotización
+          </a>
+          <a href="https://wa.me/18093593011" target="_blank" rel="noopener"
+             class="px-7 py-3 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-[#0B3B4E] transition-all duration-300 text-sm md:text-base flex items-center gap-2">
+            <i class="fab fa-whatsapp text-lg"></i> WhatsApp
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<app-footer></app-footer>
+<app-whatsapp-fab></app-whatsapp-fab>

@@ -1,0 +1,165 @@
+<!-- Barra superior: logo + navegación de regreso -->
+<div class="w-full bg-[#0B3B4E] sticky top-0 z-50">
+  <div class="container mx-auto flex items-center justify-between h-[72px] px-4 md:px-8">
+    <a routerLink="/home" aria-label="Hidropozo SRL — Inicio" class="flex items-center">
+      <img src="/assets/logo-white.png" alt="Hidropozo SRL" class="h-9 w-auto">
+    </a>
+    <div class="flex items-center gap-6">
+      <a routerLink="/home" fragment="servicios"
+         class="hidden sm:inline text-sm font-semibold text-white/90 hover:text-[#f59e0b] transition-colors">Servicios</a>
+      <a routerLink="/home" fragment="form-contacto"
+         class="hidden sm:inline text-sm font-semibold text-white/90 hover:text-[#f59e0b] transition-colors">Contacto</a>
+      <a routerLink="/home"
+         class="text-sm font-semibold text-white/90 hover:text-[#f59e0b] transition-colors flex items-center gap-2">
+        <i class="fas fa-arrow-left text-xs"></i> Volver al inicio
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== HERO del servicio ===== -->
+<section class="relative w-full bg-[#0B3B4E] overflow-hidden">
+  <div class="container mx-auto px-4 md:px-8 py-14 md:py-20">
+    <div class="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+      <div class="max-w-xl order-2 lg:order-1">
+        <p class="text-[#7FD4C1] font-semibold uppercase tracking-[0.15em] text-xs sm:text-sm mb-4">
+          Servicio · Mantenimiento
+        </p>
+        <h1 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-5">
+          Mantenimiento de pozos de agua en República Dominicana
+        </h1>
+        <p class="text-base sm:text-lg text-white/90 leading-relaxed mb-8">
+          Un pozo bien mantenido dura más y produce mejor. Limpiamos, rehabilitamos y optimizamos pozos
+          existentes en toda República Dominicana.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a routerLink="/home" fragment="form-contacto"
+             class="px-6 py-3 bg-[#f59e0b] hover:bg-[#d97706] text-white font-bold rounded-lg transition-all duration-300 hover:scale-105 shadow-lg text-sm md:text-base">
+            Solicitar cotización
+          </a>
+          <a href="https://wa.me/18093593011" target="_blank" rel="noopener"
+             class="px-6 py-3 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-[#0B3B4E] transition-all duration-300 text-sm md:text-base flex items-center gap-2">
+            <i class="fab fa-whatsapp text-lg"></i> Escríbenos
+          </a>
+        </div>
+      </div>
+      <div class="relative order-1 lg:order-2">
+        <div class="rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10 aspect-[4/3]">
+          <img src="assets/images/hidropozo-obra-3.jpg"
+               alt="Equipo de Hidropozo SRL dando mantenimiento a un pozo de agua"
+               class="w-full h-full object-cover object-center"
+               fetchpriority="high">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTENIDO ===== -->
+<section class="w-full bg-white py-14 md:py-20">
+  <div class="container mx-auto px-4">
+    <div class="max-w-3xl mx-auto">
+
+      <!-- Intro -->
+      <div appReveal>
+        <h2 class="font-display text-2xl md:text-3xl font-extrabold text-[#0B3B4E] mb-4">
+          ¿Por qué dar mantenimiento a su pozo?
+        </h2>
+        <p class="text-gray-600 leading-relaxed mb-4">
+          Con el tiempo, todo pozo va perdiendo rendimiento: las incrustaciones, los sedimentos y el desgaste de
+          la bomba reducen el <strong>caudal</strong> y afectan la calidad del agua. Un mantenimiento adecuado
+          recupera la producción y <strong>prolonga la vida útil</strong> de su pozo.
+        </p>
+        <p class="text-gray-600 leading-relaxed">
+          En <strong>Hidropozo SRL</strong> diagnosticamos y rehabilitamos pozos de agua en toda la República
+          Dominicana, con más de 30 años de experiencia y equipo especializado.
+        </p>
+      </div>
+
+      <!-- Qué incluye -->
+      <div class="mt-12" appReveal>
+        <h2 class="font-display text-2xl md:text-3xl font-extrabold text-[#0B3B4E] mb-6">
+          ¿Qué incluye el mantenimiento?
+        </h2>
+        <div class="grid sm:grid-cols-3 gap-5">
+          <div class="bg-slate-50 rounded-xl p-5 border border-slate-100">
+            <i class="fas fa-broom text-2xl text-[#f59e0b] mb-3"></i>
+            <h3 class="font-bold text-[#0B3B4E] mb-1">Limpieza y desincrustación</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">Retiro de sedimentos e incrustaciones que tapan el pozo.</p>
+          </div>
+          <div class="bg-slate-50 rounded-xl p-5 border border-slate-100">
+            <i class="fas fa-arrows-rotate text-2xl text-[#f59e0b] mb-3"></i>
+            <h3 class="font-bold text-[#0B3B4E] mb-1">Rehabilitación de pozos</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">Recuperación del caudal y rendimiento original del pozo.</p>
+          </div>
+          <div class="bg-slate-50 rounded-xl p-5 border border-slate-100">
+            <i class="fas fa-gauge-high text-2xl text-[#f59e0b] mb-3"></i>
+            <h3 class="font-bold text-[#0B3B4E] mb-1">Pruebas y diagnóstico</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">Pruebas de bombeo para evaluar el estado real del pozo.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Señales -->
+      <div class="mt-12" appReveal>
+        <h2 class="font-display text-2xl md:text-3xl font-extrabold text-[#0B3B4E] mb-6">
+          Señales de que su pozo necesita mantenimiento
+        </h2>
+        <ul class="space-y-3">
+          <li class="flex items-start gap-3 text-gray-700">
+            <i class="fas fa-circle-check text-[#f59e0b] mt-1"></i>
+            <span><strong>Bajó el caudal</strong>: sale menos agua que antes.</span>
+          </li>
+          <li class="flex items-start gap-3 text-gray-700">
+            <i class="fas fa-circle-check text-[#f59e0b] mt-1"></i>
+            <span><strong>Agua turbia o con arena</strong>.</span>
+          </li>
+          <li class="flex items-start gap-3 text-gray-700">
+            <i class="fas fa-circle-check text-[#f59e0b] mt-1"></i>
+            <span><strong>La bomba trabaja de más</strong> o se apaga con frecuencia.</span>
+          </li>
+          <li class="flex items-start gap-3 text-gray-700">
+            <i class="fas fa-circle-check text-[#f59e0b] mt-1"></i>
+            <span><strong>Hace años</strong> que no se le da servicio.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Para quién -->
+      <div class="mt-12" appReveal>
+        <h2 class="font-display text-2xl md:text-3xl font-extrabold text-[#0B3B4E] mb-4">
+          ¿Para quién?
+        </h2>
+        <p class="text-gray-600 leading-relaxed">
+          Atendemos pozos de <strong>viviendas, fincas, comercios e industrias</strong> que ya tienen un pozo y
+          notan que su rendimiento ha bajado. Evaluamos su caso y le proponemos la solución más conveniente,
+          desde una limpieza hasta una rehabilitación completa.
+        </p>
+      </div>
+
+      <!-- CTA final -->
+      <div class="mt-14 bg-[#0B3B4E] rounded-2xl p-8 md:p-10 text-center" appReveal>
+        <h2 class="font-display text-2xl md:text-3xl font-extrabold text-white mb-3">
+          ¿Su pozo ya no rinde igual?
+        </h2>
+        <p class="text-slate-300 leading-relaxed mb-7 max-w-xl mx-auto">
+          Cuéntenos qué está pasando con su pozo y le preparamos una cotización de mantenimiento sin compromiso.
+        </p>
+        <div class="flex flex-wrap gap-4 justify-center">
+          <a routerLink="/home" fragment="form-contacto"
+             class="px-7 py-3 bg-[#f59e0b] hover:bg-[#d97706] text-white font-bold rounded-lg transition-all duration-300 hover:scale-105 shadow-lg text-sm md:text-base">
+            Solicitar cotización
+          </a>
+          <a href="https://wa.me/18093593011" target="_blank" rel="noopener"
+             class="px-7 py-3 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-[#0B3B4E] transition-all duration-300 text-sm md:text-base flex items-center gap-2">
+            <i class="fab fa-whatsapp text-lg"></i> WhatsApp
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<app-footer></app-footer>
+<app-whatsapp-fab></app-whatsapp-fab>
