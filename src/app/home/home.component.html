@@ -135,88 +135,99 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
 
       <!-- Servicio 1: Perforaciones -->
-      <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col" appReveal>
-        <!-- Imagen con degradado y título superpuesto -->
+      <div class="group bg-white rounded-2xl border border-slate-200/70 shadow-sm overflow-hidden hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col" appReveal>
+        <!-- Imagen con degradado, insignia de icono y título superpuesto -->
         <div class="relative h-56 overflow-hidden">
           <img ngSrc="assets/images/hidropozo-obra-1.jpg"
                alt="Perforación de pozos"
                fill
-               class="object-cover object-center hover:scale-105 transition-transform duration-500">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/65 to-transparent"></div>
+               class="object-cover object-center group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
+          <!-- Insignia de icono (fondo sólido para legibilidad sobre cualquier foto) -->
+          <span class="absolute top-4 left-4 w-12 h-12 rounded-xl bg-[#0B3B4E] flex items-center justify-center shadow-lg ring-1 ring-white/15">
+            <i class="fas fa-oil-well text-xl text-[#f59e0b]"></i>
+          </span>
           <span class="font-display absolute bottom-4 left-4 text-white font-extrabold text-xl tracking-wide drop-shadow">Perforaciones</span>
         </div>
         <!-- Contenido -->
         <div class="p-6 flex flex-col flex-1">
-          <ul class="space-y-3 mb-6 flex-1 text-gray-600">
-            <li class="flex items-center gap-2.5">
-              <svg class="w-4 h-4 text-[#f59e0b] shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586 4.707 9.293a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l8-8a1 1 0 000-1.414z" clip-rule="evenodd"/>
-              </svg>
+          <ul class="space-y-3 mb-6 flex-1">
+            <li class="flex items-center gap-3 text-gray-700">
+              <span class="w-5 h-5 rounded-full bg-[#f59e0b]/15 text-[#f59e0b] flex items-center justify-center shrink-0">
+                <i class="fas fa-check text-[10px]"></i>
+              </span>
               <span>Pozos de agua</span>
             </li>
-            <li class="flex items-center gap-2.5">
-              <svg class="w-4 h-4 text-[#f59e0b] shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586 4.707 9.293a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l8-8a1 1 0 000-1.414z" clip-rule="evenodd"/>
-              </svg>
+            <li class="flex items-center gap-3 text-gray-700">
+              <span class="w-5 h-5 rounded-full bg-[#f59e0b]/15 text-[#f59e0b] flex items-center justify-center shrink-0">
+                <i class="fas fa-check text-[10px]"></i>
+              </span>
               <span>Pozos filtrantes</span>
             </li>
-            <li class="flex items-center gap-2.5">
-              <svg class="w-4 h-4 text-[#f59e0b] shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586 4.707 9.293a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l8-8a1 1 0 000-1.414z" clip-rule="evenodd"/>
-              </svg>
+            <li class="flex items-center gap-3 text-gray-700">
+              <span class="w-5 h-5 rounded-full bg-[#f59e0b]/15 text-[#f59e0b] flex items-center justify-center shrink-0">
+                <i class="fas fa-check text-[10px]"></i>
+              </span>
               <span>Pilotes</span>
             </li>
           </ul>
-          <button (click)="onRequestService('service1')"
-                  class="w-full py-3 bg-[#0B3B4E] hover:bg-[#0d4a62] text-white font-semibold rounded-xl transition-colors duration-200 text-sm">
-            Solicitar Cotización
-          </button>
-          <a routerLink="/servicios/perforacion-de-pozos"
-             class="mt-3 inline-flex items-center justify-center gap-2 text-sm font-semibold text-[#0B3B4E] hover:text-[#f59e0b] transition-colors">
-            Más información <i class="fas fa-arrow-right text-xs"></i>
-          </a>
+          <div class="pt-5 border-t border-slate-100">
+            <button (click)="onRequestService('service1')"
+                    class="w-full py-3 bg-[#0B3B4E] hover:bg-[#0d4a62] text-white font-semibold rounded-xl transition-colors duration-200 text-sm">
+              Solicitar Cotización
+            </button>
+            <a routerLink="/servicios/perforacion-de-pozos"
+               class="mt-3 inline-flex items-center justify-center gap-2 w-full text-sm font-semibold text-[#0B3B4E] hover:text-[#f59e0b] transition-colors">
+              Más información <i class="fas fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
+            </a>
+          </div>
         </div>
       </div>
 
       <!-- Servicio 2: Estudios -->
-      <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col" appReveal>
+      <div class="group bg-white rounded-2xl border border-slate-200/70 shadow-sm overflow-hidden hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col" appReveal>
         <div class="relative h-56 overflow-hidden">
           <img ngSrc="assets/images/pexels-rezwan-1216589.jpg"
                alt="Estudios hidrogeológicos"
                fill
-               class="object-cover object-center hover:scale-105 transition-transform duration-500">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/65 to-transparent"></div>
+               class="object-cover object-center group-hover:scale-105 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
+          <span class="absolute top-4 left-4 w-12 h-12 rounded-xl bg-[#0B3B4E] flex items-center justify-center shadow-lg ring-1 ring-white/15">
+            <i class="fas fa-magnifying-glass-chart text-xl text-[#f59e0b]"></i>
+          </span>
           <span class="font-display absolute bottom-4 left-4 text-white font-extrabold text-xl tracking-wide drop-shadow">Estudios</span>
         </div>
         <div class="p-6 flex flex-col flex-1">
-          <ul class="space-y-3 mb-6 flex-1 text-gray-600">
-            <li class="flex items-center gap-2.5">
-              <svg class="w-4 h-4 text-[#f59e0b] shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586 4.707 9.293a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l8-8a1 1 0 000-1.414z" clip-rule="evenodd"/>
-              </svg>
+          <ul class="space-y-3 mb-6 flex-1">
+            <li class="flex items-center gap-3 text-gray-700">
+              <span class="w-5 h-5 rounded-full bg-[#f59e0b]/15 text-[#f59e0b] flex items-center justify-center shrink-0">
+                <i class="fas fa-check text-[10px]"></i>
+              </span>
               <span>Prueba de bombeo (aforo)</span>
             </li>
-            <li class="flex items-center gap-2.5">
-              <svg class="w-4 h-4 text-[#f59e0b] shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586 4.707 9.293a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l8-8a1 1 0 000-1.414z" clip-rule="evenodd"/>
-              </svg>
+            <li class="flex items-center gap-3 text-gray-700">
+              <span class="w-5 h-5 rounded-full bg-[#f59e0b]/15 text-[#f59e0b] flex items-center justify-center shrink-0">
+                <i class="fas fa-check text-[10px]"></i>
+              </span>
               <span>Infiltración</span>
             </li>
-            <li class="flex items-center gap-2.5">
-              <svg class="w-4 h-4 text-[#f59e0b] shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586 4.707 9.293a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l8-8a1 1 0 000-1.414z" clip-rule="evenodd"/>
-              </svg>
+            <li class="flex items-center gap-3 text-gray-700">
+              <span class="w-5 h-5 rounded-full bg-[#f59e0b]/15 text-[#f59e0b] flex items-center justify-center shrink-0">
+                <i class="fas fa-check text-[10px]"></i>
+              </span>
               <span>Prospección hidrogeológica de aguas subterráneas</span>
             </li>
           </ul>
-          <button (click)="onRequestService('service2')"
-                  class="w-full py-3 bg-[#0B3B4E] hover:bg-[#0d4a62] text-white font-semibold rounded-xl transition-colors duration-200 text-sm">
-            Solicitar Cotización
-          </button>
-          <a routerLink="/servicios/estudios-hidrogeologicos"
-             class="mt-3 inline-flex items-center justify-center gap-2 text-sm font-semibold text-[#0B3B4E] hover:text-[#f59e0b] transition-colors">
-            Más información <i class="fas fa-arrow-right text-xs"></i>
-          </a>
+          <div class="pt-5 border-t border-slate-100">
+            <button (click)="onRequestService('service2')"
+                    class="w-full py-3 bg-[#0B3B4E] hover:bg-[#0d4a62] text-white font-semibold rounded-xl transition-colors duration-200 text-sm">
+              Solicitar Cotización
+            </button>
+            <a routerLink="/servicios/estudios-hidrogeologicos"
+               class="mt-3 inline-flex items-center justify-center gap-2 w-full text-sm font-semibold text-[#0B3B4E] hover:text-[#f59e0b] transition-colors">
+              Más información <i class="fas fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
+            </a>
+          </div>
         </div>
       </div>
 

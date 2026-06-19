@@ -10,7 +10,7 @@
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       @for (item of visibleItems(group); track item.src) {
-        <div class="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 h-64 bg-[#0B3B4E]">
+        <div class="group relative rounded-2xl overflow-hidden border border-slate-200/70 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-64 bg-[#0B3B4E]">
 
           @if (item.type === 'image') {
             <!-- Tarjeta de imagen (WebP con fallback a JPG) -->
@@ -19,6 +19,9 @@
               <img [src]="item.src" [alt]="item.title" loading="lazy"
                    class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             </picture>
+            <!-- Degradado + título del proyecto -->
+            <div class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/75 to-transparent pointer-events-none"></div>
+            <span class="absolute bottom-3 left-4 right-4 text-white font-semibold text-sm leading-snug drop-shadow">{{ item.title }}</span>
 
           } @else {
             <!-- Tarjeta de video: portada nítida; el video solo se descarga al reproducir -->
@@ -28,13 +31,17 @@
                    class="absolute inset-0 w-full h-full object-cover"></video>
 
             @if (!item.playing) {
-              <!-- Overlay con botón de play (se oculta al reproducir) -->
+              <!-- Overlay con botón de play y título (se oculta al reproducir) -->
               <button type="button" (click)="playVideo(item, videoEl)"
-                      class="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-t from-black/70 via-black/20 to-black/30 cursor-pointer focus:outline-none"
+                      class="absolute inset-0 cursor-pointer focus:outline-none"
                       [attr.aria-label]="'Reproducir video: ' + item.title">
-                <span class="w-16 h-16 rounded-full bg-[#f59e0b]/90 group-hover:bg-[#f59e0b] flex items-center justify-center transition-all duration-300 group-hover:scale-110 shadow-lg">
-                  <i class="fas fa-play text-white text-xl ml-1"></i>
+                <span class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-black/25"></span>
+                <span class="absolute inset-0 flex items-center justify-center">
+                  <span class="w-16 h-16 rounded-full bg-[#f59e0b]/90 group-hover:bg-[#f59e0b] flex items-center justify-center transition-all duration-300 group-hover:scale-110 shadow-lg">
+                    <i class="fas fa-play text-white text-xl ml-1"></i>
+                  </span>
                 </span>
+                <span class="absolute bottom-3 left-4 right-4 text-left text-white font-semibold text-sm leading-snug drop-shadow">{{ item.title }}</span>
               </button>
             }
           }
