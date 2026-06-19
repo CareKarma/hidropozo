@@ -41,5 +41,8 @@ testem.log
 .DS_Store
 Thumbs.db
 
+# Environment variables (API keys)
+.env
+
 # Claude Code editor files
 .claude/
