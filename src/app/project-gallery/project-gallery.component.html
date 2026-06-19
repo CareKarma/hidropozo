@@ -23,7 +23,7 @@
           } @else {
             <!-- Tarjeta de video: portada nítida; el video solo se descarga al reproducir -->
             <video #videoEl [attr.src]="item.src" [attr.poster]="posterOf(item.src)"
-                   preload="none" playsinline
+                   preload="none" playsinline [muted]="true"
                    [controls]="item.playing" (play)="onPlay(videoEl)"
                    class="absolute inset-0 w-full h-full object-cover"></video>
 
