@@ -36,6 +36,9 @@ export class ProjectGalleryComponent {
     {
       heading: 'Perforación de pozos',
       items: [
+        { type: 'video', src: 'assets/images/hidropozo-proyecto-14.mp4', title: 'Torre de perforación en obra' },
+        { type: 'video', src: 'assets/images/hidropozo-proyecto-15.mp4', title: 'Pozo brotando agua con fuerza' },
+        { type: 'video', src: 'assets/images/hidropozo-proyecto-13.mp4', title: 'Perforadora en campo abierto' },
         { type: 'video', src: 'assets/images/hidropozo-proyecto-7.mp4', title: 'Perforación exitosa de pozo' },
         { type: 'video', src: 'assets/images/hidropozo-proyecto-9.mp4', title: 'Pozo brotando agua — toma amplia' },
         { type: 'image', src: 'assets/images/hidropozo-perforacion-3.jpg', title: 'Equipo de perforación en obra' },
