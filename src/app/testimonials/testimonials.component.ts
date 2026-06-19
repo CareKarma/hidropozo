@@ -67,4 +67,14 @@ export class TestimonialsComponent implements OnInit {
   starsArray(n: number): number[] {
     return Array.from({ length: n });
   }
+
+  // Iniciales del autor (máx. 2) para el avatar cuando no hay foto de perfil.
+  initials(name: string): string {
+    return name
+      .split(' ')
+      .filter(Boolean)
+      .slice(0, 2)
+      .map((w) => w[0].toUpperCase())
+      .join('');
+  }
 }
