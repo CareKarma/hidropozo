@@ -332,51 +332,103 @@
       <div class="mx-auto mt-4 w-16 h-1 bg-[#f59e0b] rounded-full"></div>
     </div>
 
-    <!-- Primera fila: imagen izquierda, texto derecha -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center mb-16" appReveal>
-      <div class="relative rounded-2xl shadow-lg overflow-hidden h-72 md:h-96 order-1">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start max-w-6xl mx-auto" appReveal>
+
+      <!-- Columna imagen con badges flotantes -->
+      <div class="relative rounded-2xl overflow-hidden shadow-xl h-[420px] md:h-[500px]">
         <img ngSrc="assets/images/hidropozo-perforacion-1.jpg"
              alt="Equipo de Hidropozo trabajando en campo"
              fill
              class="object-cover hover:scale-105 transition-transform duration-500">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent pointer-events-none"></div>
+        <!-- Badge país -->
+        <span class="absolute top-4 right-4 bg-[#f59e0b] text-[#0B3B4E] text-xs font-bold px-3 py-1.5 rounded-lg tracking-wide shadow">
+          República Dominicana
+        </span>
+        <!-- Estadística flotante -->
+        <div class="absolute bottom-4 left-4 bg-white rounded-xl shadow-lg px-3 py-2.5 flex items-center gap-3">
+          <span class="w-10 h-10 rounded-lg bg-[#0B3B4E]/10 text-[#0B3B4E] flex items-center justify-center">
+            <i class="fas fa-award text-xl" aria-hidden="true"></i>
+          </span>
+          <div class="leading-tight">
+            <p class="text-lg font-extrabold text-[#0B3B4E]">+30 años</p>
+            <p class="text-[11px] text-slate-500">de experiencia</p>
+          </div>
+        </div>
       </div>
-      <div class="order-2 space-y-5">
-        <p class="text-base md:text-lg text-gray-700 leading-relaxed">
-          <strong class="text-[#0B3B4E] font-bold">HIDROPOZO<span class="text-sm align-super ml-0.5">SRL</span></strong>
-          es una empresa con más de 30 años de experiencia en el sector de la ingeniería hidráulica, especializada
-          en la construcción de pozos filtrantes, estudios hidrogeológicos, pruebas de infiltración, aforo de pozos
-          y perforaciones de alta calidad.
-        </p>
-        <p class="text-base md:text-lg text-gray-700 leading-relaxed">
-          Desde nuestra fundación, hemos trabajado para ofrecer soluciones innovadoras y eficientes en la gestión
-          de recursos hídricos, siempre enfocados en la sostenibilidad y la excelencia técnica.
-        </p>
-        <p class="text-base md:text-lg text-gray-700 leading-relaxed">
-          A lo largo de los años, nos hemos consolidado como líderes en la construcción y mantenimiento de sistemas
-          de captación de agua subterránea, adaptándonos a las necesidades de nuestros clientes.
-        </p>
-      </div>
-    </div>
 
-    <!-- Segunda fila: texto izquierda, imagen derecha -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center" appReveal>
-      <div class="order-2 md:order-1 space-y-5">
-        <p class="text-base md:text-lg text-gray-700 leading-relaxed">
-          Contamos con un equipo altamente capacitado y comprometido con la calidad, la seguridad y el cumplimiento
-          de las normativas vigentes. Nuestra misión es garantizar un servicio eficiente, responsable y con altos
-          estándares de calidad en cada proyecto.
-        </p>
-        <p class="text-base md:text-lg text-gray-700 leading-relaxed">
-          En <strong class="text-[#0B3B4E] font-bold">HIDROPOZO<span class="text-sm align-super ml-0.5">SRL</span></strong>,
-          trabajamos para brindar soluciones integrales en la perforación y manejo de aguas subterráneas, promoviendo
-          la preservación y el uso sostenible de los recursos hídricos, contribuyendo al bienestar de nuestras comunidades.
-        </p>
-      </div>
-      <div class="relative rounded-2xl shadow-lg overflow-hidden h-72 md:h-96 order-1 md:order-2">
-        <img ngSrc="assets/images/hidropozo-obra-3.jpg"
-             alt="Proyecto de perforación Hidropozo"
-             fill
-             class="object-cover hover:scale-105 transition-transform duration-500">
+      <!-- Columna derecha: historia + pilares + misión -->
+      <div class="flex flex-col gap-6">
+
+        <!-- Historia -->
+        <div>
+          <p class="text-[#f59e0b] font-semibold uppercase tracking-widest text-xs mb-3">Nuestra historia</p>
+          <p class="text-base md:text-lg text-gray-700 leading-relaxed">
+            <strong class="text-[#0B3B4E] font-bold">HIDROPOZO<span class="text-sm align-super ml-0.5">SRL</span></strong>
+            es una empresa con más de 30 años de experiencia en el sector de la ingeniería hidráulica. Nos
+            especializamos en perforación de pozos, estudios hidrogeológicos, pruebas de infiltración y aforo,
+            ofreciendo soluciones confiables para la gestión sostenible de los recursos hídricos.
+          </p>
+        </div>
+
+        <div class="h-px bg-slate-200"></div>
+
+        <!-- 4 pilares corporativos -->
+        <div class="grid grid-cols-2 gap-4">
+          <div class="bg-white rounded-xl border border-slate-200/70 p-4 flex items-start gap-3 shadow-sm">
+            <span class="w-9 h-9 rounded-lg bg-[#0B3B4E] flex items-center justify-center shrink-0">
+              <i class="fas fa-certificate text-[#f59e0b] text-sm" aria-hidden="true"></i>
+            </span>
+            <div>
+              <p class="font-bold text-[#0B3B4E] text-sm">Certificados</p>
+              <p class="text-xs text-gray-500 mt-0.5 leading-relaxed">Personal técnico certificado y normativas vigentes.</p>
+            </div>
+          </div>
+          <div class="bg-white rounded-xl border border-slate-200/70 p-4 flex items-start gap-3 shadow-sm">
+            <span class="w-9 h-9 rounded-lg bg-[#0B3B4E] flex items-center justify-center shrink-0">
+              <i class="fas fa-leaf text-[#f59e0b] text-sm" aria-hidden="true"></i>
+            </span>
+            <div>
+              <p class="font-bold text-[#0B3B4E] text-sm">Sostenibles</p>
+              <p class="text-xs text-gray-500 mt-0.5 leading-relaxed">Uso responsable del recurso hídrico subterráneo.</p>
+            </div>
+          </div>
+          <div class="bg-white rounded-xl border border-slate-200/70 p-4 flex items-start gap-3 shadow-sm">
+            <span class="w-9 h-9 rounded-lg bg-[#0B3B4E] flex items-center justify-center shrink-0">
+              <i class="fas fa-users text-[#f59e0b] text-sm" aria-hidden="true"></i>
+            </span>
+            <div>
+              <p class="font-bold text-[#0B3B4E] text-sm">Comprometidos</p>
+              <p class="text-xs text-gray-500 mt-0.5 leading-relaxed">Equipo dedicado a la excelencia en cada obra.</p>
+            </div>
+          </div>
+          <div class="bg-white rounded-xl border border-slate-200/70 p-4 flex items-start gap-3 shadow-sm">
+            <span class="w-9 h-9 rounded-lg bg-[#0B3B4E] flex items-center justify-center shrink-0">
+              <i class="fas fa-clock text-[#f59e0b] text-sm" aria-hidden="true"></i>
+            </span>
+            <div>
+              <p class="font-bold text-[#0B3B4E] text-sm">Soporte 24/7</p>
+              <p class="text-xs text-gray-500 mt-0.5 leading-relaxed">Atención y soporte técnico continuo.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bloque misión -->
+        <div class="bg-[#0B3B4E] rounded-2xl p-6 flex gap-4 items-start">
+          <div class="w-1 bg-[#f59e0b] rounded-full self-stretch shrink-0 min-h-[3rem]"></div>
+          <div>
+            <p class="text-[#f59e0b] font-semibold uppercase tracking-widest text-xs mb-2">Nuestra misión</p>
+            <p class="text-white/85 text-sm leading-relaxed">
+              Garantizar soluciones integrales de agua subterránea, contribuyendo al bienestar de las comunidades
+              con eficiencia, calidad y respeto al medio ambiente.
+            </p>
+            <div class="flex items-center gap-2 mt-3">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#f59e0b] shrink-0"></span>
+              <span class="text-xs text-white/40">+500 pozos ejecutados · Cobertura a nivel nacional</span>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
 
@@ -395,7 +447,7 @@
       <h2 class="text-3xl md:text-5xl font-extrabold text-[#0B3B4E]">Empresas que confían en nosotros</h2>
       <div class="mx-auto mt-4 w-16 h-1 bg-[#f59e0b] rounded-full"></div>
       <p class="max-w-2xl mx-auto mt-5 text-gray-600 text-base md:text-lg leading-relaxed">
-        Hemos ejecutado proyectos de perforación e hidrogeología para empresas líderes de la República Dominicana.
+        Hemos ejecutado proyectos de perforación e hidrogeología para empresas líderes a nivel nacional.
       </p>
     </div>
 
