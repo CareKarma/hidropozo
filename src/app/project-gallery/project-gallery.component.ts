@@ -55,6 +55,13 @@ export class ProjectGalleryComponent {
       ],
     },
     {
+      heading: 'Prueba de bombeo (aforo)',
+      items: [
+        { type: 'video', src: 'assets/images/hidropozo-proyecto-16.mp4', title: 'Aforo del pozo — caudal en chorro' },
+        { type: 'video', src: 'assets/images/hidropozo-proyecto-17.mp4', title: 'Prueba de bombeo (aforo) del pozo' },
+      ],
+    },
+    {
       heading: 'Pruebas de infiltración',
       items: [
         { type: 'video', src: 'assets/images/hidropozo-proyecto-4.mp4', title: 'Prueba de infiltración' },
