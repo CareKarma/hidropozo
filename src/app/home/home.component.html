@@ -526,7 +526,11 @@
       <!-- Columna izquierda: mapa + info -->
       <div class="space-y-6">
 
-        <!-- Mapa -->
+        <!-- Mapa DESACTIVADO temporalmente: las coordenadas correspondían a una
+             residencia personal, no a la empresa. Para reactivarlo, descomenta el
+             bloque <iframe> de abajo y sustituye q=LAT,LNG por la ubicación real
+             de HIDROPOZO SRL, luego elimina la tarjeta de cobertura siguiente. -->
+        <!--
         <div class="rounded-2xl overflow-hidden shadow-md">
           <iframe
             title="Ubicación Hidropozo SRL"
@@ -538,6 +542,19 @@
             referrerpolicy="no-referrer-when-downgrade"
             allowfullscreen>
           </iframe>
+        </div>
+        -->
+
+        <!-- Tarjeta de cobertura (en lugar del mapa, mientras no haya dirección pública) -->
+        <div class="rounded-2xl overflow-hidden shadow-md bg-[#0B3B4E] text-white p-6 flex items-center gap-4">
+          <span class="w-14 h-14 rounded-xl bg-white/10 flex items-center justify-center shrink-0">
+            <i class="fas fa-location-dot text-2xl text-[#f59e0b]" aria-hidden="true"></i>
+          </span>
+          <div>
+            <h3 class="text-sm font-bold text-[#f59e0b] uppercase tracking-wider mb-1">Zona de cobertura</h3>
+            <p class="text-base font-semibold leading-tight">Servicio a nivel nacional</p>
+            <p class="text-sm text-white/70 mt-1">Nos desplazamos a su proyecto en cualquier punto del país. Coordine una visita por teléfono o WhatsApp.</p>
+          </div>
         </div>
 
         <!-- Horario de atención -->
