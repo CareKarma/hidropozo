@@ -36,6 +36,7 @@ export class ProjectGalleryComponent {
     {
       heading: 'Perforación de pozos',
       items: [
+        { type: 'video', src: 'assets/images/hidropozo-proyecto-18.mp4', title: 'Pozo perforado con salida abundante de agua' },
         { type: 'video', src: 'assets/images/hidropozo-proyecto-14.mp4', title: 'Torre de perforación en obra' },
         { type: 'video', src: 'assets/images/hidropozo-proyecto-15.mp4', title: 'Pozo brotando agua con fuerza' },
         { type: 'video', src: 'assets/images/hidropozo-proyecto-13.mp4', title: 'Perforadora en campo abierto' },
@@ -98,11 +99,20 @@ export class ProjectGalleryComponent {
 
   // Al iniciar un video, pausa cualquier otro que esté reproduciéndose
   // (cubre tanto el botón de play como los controles nativos).
-  onPlay(playing: HTMLVideoElement) {
+  onPlay(activeItem: GalleryItem, playing: HTMLVideoElement) {
+    this.groups.forEach(group => {
+      group.items.forEach(item => {
+        item.playing = item === activeItem;
+      });
+    });
+
     this.videoEls?.forEach(ref => {
       const v = ref.nativeElement;
-      if (v !== playing && !v.paused) {
+      if (v !== playing) {
         v.pause();
+        if (v.currentTime !== 0) {
+          v.currentTime = 0;
+        }
       }
     });
   }

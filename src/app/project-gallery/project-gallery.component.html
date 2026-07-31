@@ -27,7 +27,7 @@
             <!-- Tarjeta de video: portada nítida; el video solo se descarga al reproducir -->
             <video #videoEl [attr.src]="item.src" [attr.poster]="posterOf(item.src)"
                    preload="none" playsinline [muted]="true"
-                   [controls]="item.playing" (play)="onPlay(videoEl)"
+                   [controls]="item.playing" (play)="onPlay(item, videoEl)"
                    class="absolute inset-0 w-full h-full object-cover"></video>
 
             @if (!item.playing) {
@@ -41,7 +41,6 @@
                     <i class="fas fa-play text-white text-xl ml-1"></i>
                   </span>
                 </span>
-                <span class="absolute bottom-3 left-4 right-4 text-left text-white font-semibold text-sm leading-snug drop-shadow">{{ item.title }}</span>
               </button>
             }
           }
