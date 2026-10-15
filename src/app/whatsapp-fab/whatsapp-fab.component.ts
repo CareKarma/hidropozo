@@ -18,8 +18,8 @@ export class WhatsappFabComponent {
 
   // Chat vacío (sin mensaje pre-escrito). Formato internacional con +1.
   lines: WhatsappLine[] = [
-    { label: '809-359-3011', href: 'https://wa.me/18093593011' },
     { label: '829-716-8571', href: 'https://wa.me/18297168571' },
+    { label: '809-359-3011', href: 'https://wa.me/18093593011' },
   ];
 
   toggle() {
