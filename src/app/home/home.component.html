@@ -16,21 +16,35 @@
           Perforación de pozos · República Dominicana
         </span>
         <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-5 animate-hero-in leading-tight">
-          HIDROPOZO<span class="text-xl sm:text-2xl align-super ml-1 font-bold">SRL</span>
+          Perforamos el pozo que su proyecto necesita
         </h1>
         <p class="text-base sm:text-lg text-white/90 max-w-xl mb-8 animate-hero-in-up leading-relaxed">
-          Especialistas en perforación de pozos y mantenimiento. Soluciones confiables y eficientes para sus necesidades de agua.
+          Del estudio del terreno a la entrega del pozo, nos encargamos de todo el proceso.
+          Agua de buena calidad, en el plazo acordado.
         </p>
         <div class="flex flex-wrap gap-4 animate-hero-in-up">
           <button (click)="onRequestService('service1')"
                   class="px-6 py-3 bg-[#f59e0b] hover:bg-[#d97706] text-white font-bold rounded-lg transition-all duration-300 hover:scale-105 shadow-lg text-sm md:text-base">
-            Solicitar Servicio
+            Solicitar cotización
           </button>
-          <button (click)="scrollToSection('#nosotros')"
+          <button (click)="scrollToSection('#proyectos')"
                   class="px-6 py-3 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-[#0B3B4E] transition-all duration-300 text-sm md:text-base">
-            Conócenos
+            Ver proyectos
           </button>
         </div>
+
+        <!-- Señales de confianza: hechos concretos, no adjetivos -->
+        <ul class="flex flex-wrap gap-x-6 gap-y-2 mt-8 animate-hero-in-up">
+          <li class="flex items-center gap-2 text-white/80 text-sm">
+            <i class="fas fa-check text-[#f59e0b]" aria-hidden="true"></i> Equipos propios
+          </li>
+          <li class="flex items-center gap-2 text-white/80 text-sm">
+            <i class="fas fa-check text-[#f59e0b]" aria-hidden="true"></i> Personal técnico
+          </li>
+          <li class="flex items-center gap-2 text-white/80 text-sm">
+            <i class="fas fa-check text-[#f59e0b]" aria-hidden="true"></i> Cobertura nacional
+          </li>
+        </ul>
       </div>
 
       <!-- Columna imagen: carrusel Flowbite CONTENIDO en una tarjeta -->
@@ -130,6 +144,10 @@
       <p class="text-[#f59e0b] font-semibold uppercase tracking-widest text-xs md:text-sm mb-2">Lo que ofrecemos</p>
       <h2 class="text-3xl md:text-5xl font-extrabold text-[#0B3B4E]">Nuestros Servicios</h2>
       <div class="mx-auto mt-4 w-16 h-1 bg-[#f59e0b] rounded-full"></div>
+      <p class="max-w-2xl mx-auto mt-5 text-gray-600 text-base md:text-lg leading-relaxed">
+        Primero estudiamos el terreno y localizamos el agua; después perforamos.
+        Así su inversión no depende de la suerte.
+      </p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
@@ -174,7 +192,7 @@
           <div class="pt-5 border-t border-slate-100">
             <button (click)="onRequestService('service1')"
                     class="w-full py-3 bg-[#0B3B4E] hover:bg-[#0d4a62] text-white font-semibold rounded-xl transition-colors duration-200 text-sm">
-              Solicitar Cotización
+              Solicitar cotización
             </button>
             <a routerLink="/servicios/perforacion-de-pozos"
                class="mt-3 inline-flex items-center justify-center gap-2 w-full text-sm font-semibold text-[#0B3B4E] hover:text-[#f59e0b] transition-colors">
@@ -221,7 +239,7 @@
           <div class="pt-5 border-t border-slate-100">
             <button (click)="onRequestService('service2')"
                     class="w-full py-3 bg-[#0B3B4E] hover:bg-[#0d4a62] text-white font-semibold rounded-xl transition-colors duration-200 text-sm">
-              Solicitar Cotización
+              Solicitar cotización
             </button>
             <a routerLink="/servicios/estudios-hidrogeologicos"
                class="mt-3 inline-flex items-center justify-center gap-2 w-full text-sm font-semibold text-[#0B3B4E] hover:text-[#f59e0b] transition-colors">
@@ -244,7 +262,7 @@
       <h2 class="text-3xl md:text-5xl font-extrabold text-white">Cómo trabajamos</h2>
       <div class="mx-auto mt-4 w-16 h-1 bg-[#f59e0b] rounded-full"></div>
       <p class="max-w-2xl mx-auto mt-5 text-slate-300 text-base md:text-lg leading-relaxed">
-        Un proceso ordenado y transparente, de principio a fin, para garantizar resultados confiables.
+        Cuatro pasos, un solo responsable: usted sabe qué se hace, cuándo y por qué, desde el primer día.
       </p>
     </div>
 
@@ -313,7 +331,7 @@
       <h2 class="text-3xl md:text-5xl font-extrabold text-[#0B3B4E]">Proyectos</h2>
       <div class="mx-auto mt-4 w-16 h-1 bg-[#f59e0b] rounded-full"></div>
       <p class="max-w-2xl mx-auto mt-5 text-gray-600 text-base md:text-lg leading-relaxed">
-        Una muestra de pozos perforados y trabajos en campo que respaldan nuestra experiencia.
+        Videos y fotos reales de nuestras obras: vea los pozos brotando agua, tal como se entregaron.
       </p>
     </div>
 
@@ -419,8 +437,8 @@
           <div>
             <p class="text-[#f59e0b] font-semibold uppercase tracking-widest text-xs mb-2">Nuestra misión</p>
             <p class="text-white/85 text-sm leading-relaxed">
-              Garantizar soluciones integrales de agua subterránea, contribuyendo al bienestar de las comunidades
-              con eficiencia, calidad y respeto al medio ambiente.
+              Que cada cliente cuente con su propia fuente de agua: pozos bien construidos, entregados
+              a tiempo y con soporte cuando lo necesite, cuidando el recurso para las próximas generaciones.
             </p>
             <div class="flex items-center gap-2 mt-3">
               <span class="w-1.5 h-1.5 rounded-full bg-[#f59e0b] shrink-0"></span>
@@ -443,7 +461,7 @@
   <div class="container mx-auto px-4">
 
     <div class="text-center mb-12" appReveal>
-      <p class="text-[#f59e0b] font-semibold uppercase tracking-widest text-xs md:text-sm mb-2">Confían en nosotros</p>
+      <p class="text-[#f59e0b] font-semibold uppercase tracking-widest text-xs md:text-sm mb-2">Nuestros clientes</p>
       <h2 class="text-3xl md:text-5xl font-extrabold text-[#0B3B4E]">Empresas que confían en nosotros</h2>
       <div class="mx-auto mt-4 w-16 h-1 bg-[#f59e0b] rounded-full"></div>
       <p class="max-w-2xl mx-auto mt-5 text-gray-600 text-base md:text-lg leading-relaxed">
@@ -553,7 +571,18 @@
           <div>
             <h3 class="text-sm font-bold text-[#f59e0b] uppercase tracking-wider mb-1">Zona de cobertura</h3>
             <p class="text-base font-semibold leading-tight">Servicio a nivel nacional</p>
-            <p class="text-sm text-white/70 mt-1">Nos desplazamos a su proyecto en cualquier punto del país. Coordine una visita por teléfono o WhatsApp.</p>
+            <p class="text-sm text-white/70 mt-1">Nos desplazamos a su proyecto en cualquier punto del país.</p>
+            <div class="flex flex-wrap gap-2 mt-3">
+              <a href="https://wa.me/18093593011?text=Hola%2C%20quiero%20coordinar%20una%20visita%20para%20mi%20proyecto."
+                 target="_blank" rel="noopener"
+                 class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#25D366] hover:bg-[#1fb958] text-white text-xs font-semibold transition-colors">
+                <i class="fab fa-whatsapp text-sm" aria-hidden="true"></i> Coordinar visita
+              </a>
+              <a href="tel:+18093593011"
+                 class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg border border-white/25 hover:bg-white/10 text-white text-xs font-semibold transition-colors">
+                <i class="fas fa-phone-alt text-[11px]" aria-hidden="true"></i> Llamar ahora
+              </a>
+            </div>
           </div>
         </div>
 
